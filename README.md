@@ -78,12 +78,4 @@ Feel free to reach out via:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Next Steps for Deployment
 
-1. **Choose your preferred deployment platform** (GitHub Pages recommended for beginners)
-2. **Create accounts** on your chosen platform
-3. **Upload your files** following the platform's instructions
-4. **Test your live website** to ensure everything works correctly
-5. **Share your portfolio** with potential employers and on professional networks
-
-Your portfolio is now ready to showcase your professional journey in data analytics and cybersecurity!
