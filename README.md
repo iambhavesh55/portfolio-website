@@ -22,49 +22,6 @@ This is a personal portfolio website designed to showcase my skills, projects, a
 - **Font Awesome**: For icons throughout the website.
 - **Google Fonts**: Using Inter font family for modern typography.
 
-## How to Deploy
-
-### Option 1: GitHub Pages (Free)
-
-1. **Create a GitHub Repository**:
-   - Go to [GitHub](https://github.com) and create a new repository
-   - Name it `your-username.github.io` (replace with your actual GitHub username)
-   - Make it public
-
-2. **Upload Your Files**:
-   - Upload all files from your project to the repository
-   - Make sure `index.html` is in the root directory
-
-3. **Enable GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Select "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-   - Click Save
-
-4. **Access Your Website**:
-   - Your site will be available at `https://your-username.github.io`
-
-### Option 2: Netlify (Free with Custom Domain)
-
-1. **Create Netlify Account**:
-   - Go to [Netlify](https://netlify.com) and sign up
-
-2. **Deploy Your Site**:
-   - Drag and drop your project folder to Netlify dashboard
-   - Or connect your GitHub repository for automatic deployments
-
-3. **Custom Domain** (Optional):
-   - Go to Site Settings → Domain Management
-   - Add your custom domain
-
-### Option 3: Vercel (Free)
-
-1. **Create Vercel Account**:
-   - Go to [Vercel](https://vercel.com) and sign up
-
-2. **Deploy**:
-   - Import your GitHub repository
-   - Vercel will automatically deploy your site
 
 ## Project Structure
 
