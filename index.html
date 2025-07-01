@@ -3,92 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavesh Chaudhary Portfolio</title>
+    <title>Bhavesh Chaudhary - Data Analytics & Cybersecurity Professional</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bhavesh Chaudhary</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BC</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I’m Bhavesh Chaudhary, a business information systems graduate from Asia Pacific International College with a strong foundation in ICT and a growing passion for cybersecurity and data analytics. Currently, I’m expanding my expertise through my Professional Year in ICT while gaining hands-on experience in data-driven projects during my internship. I’m always eager to explore new challenges in ethical hacking, programming, and data analysis with the goal of becoming an expert in these fields.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Bhavesh Chaudhary</span>
+                    </h1>
+                    <p class="hero-subtitle">Data Analytics & Cybersecurity Professional</p>
+                    <p class="hero-description">
+                        Business Information Systems graduate with expertise in data analytics, 
+                        machine learning, and cybersecurity. Currently expanding my skills through 
+                        Professional Year in ICT and hands-on internship experience.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background and passion</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated Business Information Systems graduate from Asia Pacific International College 
+                        with a strong foundation in ICT and a growing passion for cybersecurity and data analytics. 
+                        Currently, I'm expanding my expertise through my Professional Year in ICT while gaining 
+                        hands-on experience in data-driven projects during my internship.
+                    </p>
+                    <p>
+                        My journey in technology is driven by curiosity and the desire to solve complex problems 
+                        through data analysis and ethical hacking. I'm always eager to explore new challenges 
+                        in programming and data analysis with the goal of becoming an expert in these fields.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work and achievements</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-type">College Project</div>
+                    </div>
+                    <h3 class="project-title">Buy and Sell System</h3>
+                    <p class="project-description">
+                        A comprehensive online platform enabling users to buy and sell various products. 
+                        Features user authentication, product management, and secure payment processing.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>User authentication and profile management</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced search and filter functionality</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Integrated payment gateway</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Admin panel for comprehensive management</span>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="project">
-            <h3>Buy and Sell System (College Project)</h3>
-            <p>Description: This project was developed as part of my final year in college. It’s an online platform where users can buy and sell various products. The system allows sellers to list their products, set prices, and manage inventory, while buyers can search for products, place orders, and complete purchases.</p>
-            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, MySQL, PHP</p>
-            <ul>
-                <li>User authentication and profile management</li>
-                <li>Search and filter functionality for products</li>
-                <li>Integrated payment gateway for secure transactions</li>
-                <li>Admin panel for managing users, products, and transactions</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>Customer Churn Analysis (Internship Project)</h3>
-            <p>Description: In my current internship, I am working on a Customer Churn Analysis project for a telecommunications company. The goal of this project is to identify patterns and factors contributing to customer churn and build predictive models to retain customers.</p>
-            <p><strong>Technologies Used:</strong> Python, Pandas, NumPy, Scikit-learn, Matplotlib, SQL</p>
-            <ul>
-                <li>Data cleaning, preprocessing, and feature engineering</li>
-                <li>Exploratory Data Analysis (EDA) to understand customer behavior</li>
-                <li>Building predictive models using machine learning techniques</li>
-                <li>Reporting and visualization of key insights to stakeholders</li>
-            </ul>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-type">Internship Project</div>
+                    </div>
+                    <h3 class="project-title">Customer Churn Analysis</h3>
+                    <p class="project-description">
+                        Advanced data analytics project for a telecommunications company to identify 
+                        customer churn patterns and build predictive models for customer retention.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Data cleaning and preprocessing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Exploratory Data Analysis (EDA)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Machine learning predictive models</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Stakeholder reporting and visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>HTML, CSS</li>
-            <li>SQL, MySQL</li>
-            <li>GitHub, Jira, Confluence</li>
-            <li>Flask, Scikit-learn, NumPy, Pandas, Matplotlib</li>
-            <li>Data Analytics, Ethical Hacking, Machine Learning, Cybersecurity</li>
-            <li>VS Code, Jupyter Notebook</li>
-        </ul>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data Analytics</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Pandas & NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Ethical Hacking</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Security Analysis</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">VS Code</span>
+                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">Jira</span>
+                        <span class="tech-tag">Confluence</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Resume Section -->
-    <section id="resume">
-        <h2>Resume</h2>
-        <p><a href="Bhavesh Resume.pdf" target="_blank">Download my Resume</a></p>
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resume</h2>
+                <p class="section-subtitle">Download my complete professional profile</p>
+            </div>
+            <div class="resume-content">
+                <div class="resume-card">
+                    <div class="resume-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Professional Resume</h3>
+                    <p>Complete overview of my education, experience, and achievements</p>
+                    <a href="Bhavesh Resume.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at: <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a></p>
-        <p>Phone: +61 468 538 615</p>
-        <p>Find me on LinkedIn: <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/">LinkedIn Profile</a></p>
-        <p>Check out my GitHub: <a href="https://github.com/iambhavesh55">GitHub Profile</a></p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <span>+61 468 538 615</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/iambhavesh55" target="_blank">View my repositories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    
 
-    <footer>
-        <p>© 2024 Bhavesh Chaudhary</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Bhavesh Chaudhary. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/iambhavesh55" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:iambhavesh55@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
