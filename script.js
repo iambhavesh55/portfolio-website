@@ -58,7 +58,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add scroll animation class to elements
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.project-card, .skill-category, .stat, .contact-item');
+    const animateElements = document.querySelectorAll('.project-card, .skill-category, .stat, .contact-item, .education-card, .timeline-item');
     animateElements.forEach(el => {
         el.classList.add('scroll-animate');
         observer.observe(el);
@@ -194,3 +194,21 @@ const imageObserver = new IntersectionObserver((entries) => {
 });
 
 lazyImages.forEach(img => imageObserver.observe(img));
+
+// Timeline animation for experience section
+const timelineItems = document.querySelectorAll('.timeline-item');
+const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.3 });
+
+timelineItems.forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = 'all 0.6s ease';
+    timelineObserver.observe(item);
+});
