@@ -172,11 +172,65 @@ document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"], a[target="_blank
     });
 });
 
+// Contact Form Handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Basic validation
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const mailtoLink = `mailto:iambhavesh55@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    this.reset();
+    
+    // Show success message
+    alert('Thank you for your message! Your email client should open with the message ready to send.');
+});
+
+// Resume Modal Functions
+function openResumeModal() {
+    document.getElementById('resumeModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+    document.getElementById('resumeModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('resumeModal');
+    if (event.target === modal) {
+        closeResumeModal();
+    }
+});
+
 // Add keyboard navigation support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        closeResumeModal();
     }
 });
 
