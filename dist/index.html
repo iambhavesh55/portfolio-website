@@ -6,7 +6,8 @@
     <title>Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" crossorigin href="./assets/index-CasW3lGM.css">
+  <script type="module" crossorigin src="./assets/index-BO_TE8qh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DfL7wAFG.css">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -27,7 +28,7 @@
     </div>
 
     <!-- Scroll Progress -->
-    <div class="scroll-progress"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
     
     <!-- Background Effects -->
     <div class="bg-effects">
@@ -69,10 +70,16 @@
                     <div class="nav-indicator"></div>
                 </a>
             </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -91,9 +98,7 @@
                         <span class="title-line">Chaudhary</span>
                     </h1>
                     <div class="hero-subtitle">
-                        <span class="subtitle-text">Cybersecurity Specialist</span>
-                        <span class="subtitle-divider">&</span>
-                        <span class="subtitle-text">Data Analyst</span>
+                        <span class="typing-text" id="typingText"></span>
                     </div>
                     <p class="hero-description">
                         Passionate about ethical hacking, data analytics, and cybersecurity. 
@@ -166,6 +171,14 @@
             <div class="scroll-text">Scroll to explore</div>
             <div class="scroll-arrow"></div>
         </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -200,6 +213,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider reverse">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
@@ -250,6 +269,12 @@
                 </div>
             </div>
         </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -259,8 +284,18 @@
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">A showcase of my recent work and achievements</p>
             </div>
+            
+            <!-- Project Filters -->
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+                <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn" data-filter="college">College Projects</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card" data-aos="zoom-in">
+                <div class="project-card" data-aos="zoom-in" data-category="data-science">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-chart-line"></i>
@@ -288,18 +323,18 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link disabled">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub (Coming Soon)</span>
-                        </a>
-                        <a href="#" class="project-link disabled">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Demo (Coming Soon)</span>
-                        </a>
+                        <div class="project-link private" data-tooltip="Repository will be public soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="project-link private" data-tooltip="Live demo in development">
+                            <i class="fas fa-tools"></i>
+                            <span>In Development</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-delay="200">
+                <div class="project-card" data-aos="zoom-in" data-delay="200" data-category="college">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -316,17 +351,82 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link disabled">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub (Coming Soon)</span>
-                        </a>
-                        <a href="#" class="project-link disabled">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Demo (Coming Soon)</span>
-                        </a>
+                        <div class="project-link private" data-tooltip="Repository will be public soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="project-link private" data-tooltip="Live demo in development">
+                            <i class="fas fa-tools"></i>
+                            <span>In Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="400" data-category="web-dev">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="project-type">Web Development</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Finance Dashboard</h3>
+                        <p>Full-stack web application for personal finance management with expense tracking, budget planning, and financial analytics. Features responsive design and real-time data visualization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <div class="project-link private" data-tooltip="Repository will be public soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="project-link private" data-tooltip="Live demo in development">
+                            <i class="fas fa-tools"></i>
+                            <span>In Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="600" data-category="cybersecurity">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="project-type">Cybersecurity</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Security Analysis</h3>
+                        <p>Comprehensive security assessment and penetration testing project. Identified vulnerabilities and provided security recommendations for network infrastructure.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Ethical Hacking</span>
+                            <span class="tech-tag">Network Analysis</span>
+                            <span class="tech-tag">Security Testing</span>
+                            <span class="tech-tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <div class="project-link private" data-tooltip="Repository will be public soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="project-link private" data-tooltip="Live demo in development">
+                            <i class="fas fa-tools"></i>
+                            <span>In Development</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider reverse">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
@@ -402,6 +502,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
@@ -481,9 +587,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p>&copy; 2024 Bhavesh Chaudhary. All rights reserved.</p>
+                    <div class="footer-bio">
+                        <h4>Bhavesh Chaudhary</h4>
+                        <p class="bio-text">"Turning data into insights, securing digital futures."</p>
+                        <p class="bio-description">Passionate cybersecurity specialist and data analyst dedicated to solving complex problems through innovative technology solutions.</p>
+                    </div>
+                    <div class="certifications">
+                        <h5>Future Certifications</h5>
+                        <div class="cert-badges">
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>CISSP</span>
+                            </div>
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-user-secret"></i>
+                                <span>CEH</span>
+                            </div>
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Analytics</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-right">
+                    <p>&copy; 2024 Bhavesh Chaudhary. All rights reserved.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank" class="social-link">
                             <i class="fab fa-linkedin"></i>
@@ -505,6 +633,8 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <script src="./script.js"></script>
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
 </body>
 </html>
