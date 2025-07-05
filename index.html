@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Scroll Progress Indicator -->
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">BC</div>
+            <div class="loading-text">Initializing Portfolio...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
     
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="circuit-lines"></div>
-        <div class="data-particles"></div>
-        <div class="cyber-grid"></div>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="matrix-rain"></div>
+        <div class="floating-particles"></div>
+        <div class="grid-overlay"></div>
     </div>
 
     <!-- Navigation -->
@@ -24,168 +41,162 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">BC</span>
-                <div class="logo-pulse"></div>
+                <div class="logo-glow"></div>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link" data-text="Home">Home</a>
-                <a href="#about" class="nav-link" data-text="About">About</a>
-                <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
-                <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
-                <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
-                <a href="#education" class="nav-link" data-text="Education">Education</a>
-                <a href="#resume" class="nav-link" data-text="Resume">Resume</a>
-                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active" data-section="hero">
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="nav-text">About</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <span class="nav-text">Experience</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <span class="nav-text">Skills</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-bg-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-greeting">
-                        <span class="glitch-text">Hello, I'm</span>
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="greeting-cursor"></div>
                     </div>
                     <h1 class="hero-title">
-                        <span class="typing-text" data-text="Bhavesh Chaudhary">Bhavesh Chaudhary</span>
+                        <span class="title-line">Bhavesh</span>
+                        <span class="title-line">Chaudhary</span>
                     </h1>
-                    <div class="hero-subtitle-container">
-                        <p class="hero-subtitle">Aspiring Cybersecurity Specialist & Data Analyst</p>
-                        <p class="hero-tagline">Passionate about Ethical Hacking and Programming</p>
+                    <div class="hero-subtitle">
+                        <span class="subtitle-text">Cybersecurity Specialist</span>
+                        <span class="subtitle-divider">&</span>
+                        <span class="subtitle-text">Data Analyst</span>
                     </div>
                     <p class="hero-description">
-                        Business Information Systems graduate with expertise in data analytics, 
-                        machine learning, and cybersecurity. Recently completed Professional Year in ICT 
-                        and gained valuable hands-on experience as a Data Analyst Intern.
+                        Passionate about ethical hacking, data analytics, and cybersecurity. 
+                        Business Information Systems graduate with hands-on experience in 
+                        data analysis and machine learning.
                     </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i>
-                            <span>View My Work</span>
-                            <div class="btn-glow"></div>
+                            <span class="btn-text">View My Work</span>
+                            <div class="btn-bg"></div>
+                            <div class="btn-particles"></div>
                         </a>
                         <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>Get In Touch</span>
-                            <div class="btn-ripple"></div>
+                            <span class="btn-text">Get In Touch</span>
+                            <div class="btn-bg"></div>
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-photo-container">
-                        <div class="photo-frame">
-                            <div class="scan-line"></div>
-                            <div class="corner-brackets">
-                                <div class="bracket top-left"></div>
-                                <div class="bracket top-right"></div>
-                                <div class="bracket bottom-left"></div>
-                                <div class="bracket bottom-right"></div>
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <div class="frame-corners">
+                                <div class="corner corner-tl"></div>
+                                <div class="corner corner-tr"></div>
+                                <div class="corner corner-bl"></div>
+                                <div class="corner corner-br"></div>
                             </div>
-                            <img src="public/WhatsApp Image 2025-07-01 at 10.39.10_a93cf03e.jpg" alt="Bhavesh Chaudhary" class="profile-photo">
-                            <div class="photo-overlay"></div>
+                            <div class="profile-image">
+                                <img src="public/WhatsApp Image 2025-07-01 at 10.39.10_a93cf03e.jpg" alt="Bhavesh Chaudhary" class="profile-photo">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="scan-lines"></div>
                         </div>
-                        <div class="data-stream">
-                            <div class="stream-line"></div>
-                            <div class="stream-line"></div>
-                            <div class="stream-line"></div>
+                        <div class="profile-data">
+                            <div class="data-stream">
+                                <div class="data-line"></div>
+                                <div class="data-line"></div>
+                                <div class="data-line"></div>
+                            </div>
+                            <div class="profile-info">
+                                <div class="info-item">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Available</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Location:</span>
+                                    <span class="info-value">Australia</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="section-bg">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
-        </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">About Me</span>
-                    <div class="title-underline"></div>
-                </h2>
+                <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Discover my journey in technology and cybersecurity</p>
             </div>
             <div class="about-content">
-                <div class="about-timeline">
-                    <div class="timeline-card" data-aos="slide-right">
+                <div class="about-cards">
+                    <div class="about-card" data-aos="fade-up" data-delay="0">
                         <div class="card-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>Education</h3>
-                            <p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
-                        </div>
+                        <h3>Education</h3>
+                        <p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
                     </div>
-                    <div class="timeline-card" data-aos="slide-left">
+                    <div class="about-card" data-aos="fade-up" data-delay="200">
                         <div class="card-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>Professional Experience</h3>
-                            <p>Completed Professional Year in ICT (October 2024) and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
-                        </div>
+                        <h3>Experience</h3>
+                        <p>Completed Professional Year in ICT and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
                     </div>
-                    <div class="timeline-card" data-aos="slide-right">
+                    <div class="about-card" data-aos="fade-up" data-delay="400">
                         <div class="card-icon">
                             <i class="fas fa-target"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>Mission</h3>
-                            <p>Driven by curiosity to solve complex problems through data analysis and ethical hacking, with the goal of becoming an expert in cybersecurity and data analytics.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <div class="stat-number" data-count="2">0</div>
-                        <div class="stat-label">Years Experience</div>
-                        <div class="stat-glow"></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="stat-number" data-count="5">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                        <div class="stat-glow"></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="stat-number" data-count="10">0</div>
-                        <div class="stat-label">Technologies</div>
-                        <div class="stat-glow"></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="stat-number" data-count="1">0</div>
-                        <div class="stat-label">Completed Internship</div>
-                        <div class="stat-glow"></div>
+                        <h3>Mission</h3>
+                        <p>Driven by curiosity to solve complex problems through data analysis and ethical hacking, becoming an expert in cybersecurity.</p>
                     </div>
                 </div>
             </div>
@@ -196,53 +207,43 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Professional Experience</span>
-                    <div class="title-underline"></div>
-                </h2>
+                <h2 class="section-title">Professional Experience</h2>
                 <p class="section-subtitle">My journey in the tech industry</p>
             </div>
-            <div class="experience-timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-date">
-                        <span>July 2024 - October 2024</span>
-                    </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="slide-right">
+                    <div class="timeline-date">July 2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="content-card">
+                        <div class="timeline-info">
                             <h3>Data Analyst Intern</h3>
                             <h4>Advance Consultant Services By ACS</h4>
-                            <p>Worked on data analysis projects, developing analytical solutions, and contributing to data-driven decision making processes. Gained hands-on experience with real-world datasets and business intelligence tools during this 4-month internship.</p>
-                            <div class="skills-tags">
+                            <p>Worked on data analysis projects, developing analytical solutions, and contributing to data-driven decision making processes. Gained hands-on experience with real-world datasets and business intelligence tools.</p>
+                            <div class="timeline-skills">
                                 <span class="skill-tag">Data Analysis</span>
                                 <span class="skill-tag">Python</span>
                                 <span class="skill-tag">SQL</span>
-                                <span class="skill-tag">Business Intelligence</span>
                                 <span class="skill-tag">Power BI</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-date">
-                        <span>2024 - October 2024</span>
-                    </div>
+                <div class="timeline-item" data-aos="slide-left">
+                    <div class="timeline-date">2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="content-card">
+                        <div class="timeline-info">
                             <h3>Professional Year in ICT</h3>
                             <h4>Completed - October 2024</h4>
-                            <p>Successfully completed Professional Year program enhancing technical skills and gaining practical experience in Information and Communication Technology. Focused on advanced concepts in data analytics, cybersecurity, and software development.</p>
-                            <div class="skills-tags">
+                            <p>Successfully completed Professional Year program enhancing technical skills and gaining practical experience in Information and Communication Technology.</p>
+                            <div class="timeline-skills">
                                 <span class="skill-tag">ICT</span>
                                 <span class="skill-tag">Professional Development</span>
                                 <span class="skill-tag">Industry Knowledge</span>
-                                <span class="skill-tag">Communication Skills</span>
                             </div>
                         </div>
                     </div>
@@ -253,120 +254,77 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="section-bg">
-            <div class="project-grid-bg"></div>
-        </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Featured Projects</span>
-                    <div class="title-underline"></div>
-                </h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">A showcase of my recent work and achievements</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-aos="zoom-in">
-                    <div class="card-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="project-type">College Project</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="project-title">Buy and Sell System</h3>
-                        <p class="project-role"><strong>Role:</strong> Project Leader</p>
-                        <p class="project-description">
-                            Led a team to develop a comprehensive online platform enabling users to buy and sell various products. 
-                            Managed team coordination, deadlines, and technical tasks while ensuring project completion.
-                        </p>
-                        <div class="project-challenges">
-                            <h4>Challenges:</h4>
-                            <ul>
-                                <li>Team coordination and communication</li>
-                                <li>Meeting tight project deadlines</li>
-                                <li>Managing complex technical tasks</li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Business Information Systems Tools</span>
-                            <span class="tech-tag">Basic Databases</span>
-                            <span class="tech-tag">Team Management</span>
-                        </div>
-                        <div class="project-result">
-                            <h4>Result:</h4>
-                            <p>Successfully completed a functional buy and sell platform that met all project requirements and was delivered on time.</p>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-ghost" disabled>
-                                <i class="fab fa-github"></i>
-                                <span>GitHub (Coming Soon)</span>
-                            </button>
-                            <button class="btn btn-ghost" disabled>
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>Demo (Coming Soon)</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card-glow"></div>
-                </div>
-
-                <div class="project-card" data-aos="zoom-in">
-                    <div class="card-header">
+                    <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="project-type">Data Science Project</div>
+                        <span class="project-type">Data Science</span>
                     </div>
-                    <div class="card-content">
-                        <h3 class="project-title">Customer Churn Prediction</h3>
-                        <p class="project-role"><strong>Role:</strong> Data Analyst</p>
-                        <p class="project-description">
-                            Developed a machine learning model to predict customer churn for business decision-making. 
-                            Handled complex data processing challenges and optimized model accuracy through feature engineering.
-                        </p>
-                        <div class="project-challenges">
-                            <h4>Challenges:</h4>
-                            <ul>
-                                <li>Complex data processing and cleaning</li>
-                                <li>Advanced feature engineering techniques</li>
-                                <li>Optimizing model accuracy and performance</li>
-                            </ul>
-                        </div>
+                    <div class="project-content">
+                        <h3>Customer Churn Prediction</h3>
+                        <p>Developed a machine learning model to predict customer churn for business decision-making. Handled complex data processing and optimized model accuracy through feature engineering.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pandas</span>
                             <span class="tech-tag">Scikit-learn</span>
                             <span class="tech-tag">Matplotlib</span>
                         </div>
-                        <div class="project-images">
-                            <h4>Model Performance:</h4>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <img src="public/confusion_matrix.png" alt="Confusion Matrix" class="result-image">
-                                    <p>Confusion Matrix</p>
-                                </div>
-                                <div class="result-item">
-                                    <img src="public/roc_curve.png" alt="ROC Curve" class="result-image">
-                                    <p>ROC Curve (AUC = 0.83)</p>
-                                </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <img src="public/confusion_matrix.png" alt="Confusion Matrix" class="result-image">
+                                <span>Confusion Matrix</span>
+                            </div>
+                            <div class="result-item">
+                                <img src="public/roc_curve.png" alt="ROC Curve" class="result-image">
+                                <span>ROC Curve (AUC = 0.83)</span>
                             </div>
                         </div>
-                        <div class="project-result">
-                            <h4>Result:</h4>
-                            <p>Created a highly accurate churn prediction model that enables data-driven business decisions and customer retention strategies.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link disabled">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub (Coming Soon)</span>
+                        </a>
+                        <a href="#" class="project-link disabled">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Demo (Coming Soon)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
                         </div>
-                        <div class="project-links">
-                            <button class="btn btn-ghost" disabled>
-                                <i class="fab fa-github"></i>
-                                <span>GitHub (Coming Soon)</span>
-                            </button>
-                            <button class="btn btn-ghost" disabled>
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>Demo (Coming Soon)</span>
-                            </button>
+                        <span class="project-type">College Project</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Buy and Sell System</h3>
+                        <p>Led a team to develop a comprehensive online platform enabling users to buy and sell various products. Managed team coordination, deadlines, and technical tasks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Business Systems</span>
+                            <span class="tech-tag">Databases</span>
+                            <span class="tech-tag">Team Management</span>
                         </div>
                     </div>
-                    <div class="card-glow"></div>
+                    <div class="project-links">
+                        <a href="#" class="project-link disabled">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub (Coming Soon)</span>
+                        </a>
+                        <a href="#" class="project-link disabled">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Demo (Coming Soon)</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -376,223 +334,71 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Technical Skills</span>
-                    <div class="title-underline"></div>
-                </h2>
+                <h2 class="section-title">Technical Skills</h2>
                 <p class="section-subtitle">Technologies and tools I work with</p>
             </div>
-            <div class="skills-orbit">
-                <div class="orbit-center">
-                    <div class="center-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <div class="center-text">Skills</div>
-                </div>
-                
-                <div class="skill-category" data-category="programming">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <div class="skill-bubbles">
-                        <div class="skill-bubble" data-skill="Python">
+            <div class="skills-container">
+                <div class="skills-category" data-aos="fade-up">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
                             <span>Python</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="Java">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
                             <span>Java</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="SQL">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
                             <span>SQL</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="HTML">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
                             <span>HTML</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="CSS">
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
                             <span>CSS</span>
-                            <div class="bubble-glow"></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="skill-category" data-category="tools">
-                    <div class="category-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools & Technologies</h3>
-                    </div>
-                    <div class="skill-bubbles">
-                        <div class="skill-bubble" data-skill="GitHub">
+                <div class="skills-category" data-aos="fade-up" data-delay="200">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
                             <span>GitHub</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="VS Code">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
                             <span>VS Code</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="Power BI">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
                             <span>Power BI</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="Tableau">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
                             <span>Tableau</span>
-                            <div class="bubble-glow"></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="skill-category" data-category="cybersecurity">
-                    <div class="category-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Cybersecurity Skills</h3>
-                    </div>
-                    <div class="skill-bubbles">
-                        <div class="skill-bubble" data-skill="Ethical Hacking">
+                <div class="skills-category" data-aos="fade-up" data-delay="400">
+                    <h3>Cybersecurity</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
                             <span>Ethical Hacking</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                        <div class="skill-bubble" data-skill="Networking Tools">
-                            <span>Networking Tools</span>
-                            <div class="bubble-glow"></div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Networking</span>
                         </div>
-                        <div class="skill-bubble" data-skill="Security Testing">
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
                             <span>Security Testing</span>
-                            <div class="bubble-glow"></div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-category="soft">
-                    <div class="category-header">
-                        <i class="fas fa-users"></i>
-                        <h3>Other Skills</h3>
-                    </div>
-                    <div class="skill-bubbles">
-                        <div class="skill-bubble" data-skill="Team Leadership">
-                            <span>Team Leadership</span>
-                            <div class="bubble-glow"></div>
-                        </div>
-                        <div class="skill-bubble" data-skill="Problem Solving">
-                            <span>Problem Solving</span>
-                            <div class="bubble-glow"></div>
-                        </div>
-                        <div class="skill-bubble" data-skill="Communication">
-                            <span>Communication</span>
-                            <div class="bubble-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Education</span>
-                    <div class="title-underline"></div>
-                </h2>
-                <p class="section-subtitle">My academic background and qualifications</p>
-            </div>
-            <div class="education-stack">
-                <div class="education-card" data-aos="slide-up">
-                    <div class="card-corner-effects">
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
-                    </div>
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Bachelor of Business Information Systems</h3>
-                        <h4>Asia Pacific International College</h4>
-                        <p class="education-date">2021 - 2024</p>
-                        <p class="education-description">
-                            Comprehensive program covering business analysis, information systems, 
-                            database management, and technology integration in business environments.
-                        </p>
-                        <div class="education-highlights">
-                            <span class="highlight-tag">Business Analysis</span>
-                            <span class="highlight-tag">Information Systems</span>
-                            <span class="highlight-tag">Database Management</span>
-                            <span class="highlight-tag">Project Management</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="education-card" data-aos="slide-up">
-                    <div class="card-corner-effects">
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
-                    </div>
-                    <div class="education-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Professional Year in ICT</h3>
-                        <h4>Completed - October 2024</h4>
-                        <p class="education-date">2024</p>
-                        <p class="education-description">
-                            Successfully completed professional development program focusing on practical ICT skills, 
-                            industry knowledge, and professional communication in the Australian tech sector.
-                        </p>
-                        <div class="education-highlights">
-                            <span class="highlight-tag">Professional Skills</span>
-                            <span class="highlight-tag">Industry Knowledge</span>
-                            <span class="highlight-tag">Communication</span>
-                            <span class="highlight-tag">Career Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Resume</span>
-                    <div class="title-underline"></div>
-                </h2>
-                <p class="section-subtitle">Download my complete professional profile</p>
-            </div>
-            <div class="resume-console">
-                <div class="console-header">
-                    <div class="console-controls">
-                        <div class="control minimize"></div>
-                        <div class="control maximize"></div>
-                        <div class="control close"></div>
-                    </div>
-                    <div class="console-title">resume_viewer.exe</div>
-                </div>
-                <div class="console-content">
-                    <div class="resume-icon">
-                        <i class="fas fa-file-pdf"></i>
-                        <div class="icon-pulse"></div>
-                    </div>
-                    <h3>Professional Resume</h3>
-                    <p>Complete overview of my education, experience, and achievements</p>
-                    <div class="resume-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openResumeModal()">
-                            <i class="fas fa-eye"></i>
-                            <span>View Resume Online</span>
-                            <div class="btn-glow"></div>
-                        </a>
-                        <a href="Bhavesh_Chaudhary_IT_Resume.pdf" target="_blank" class="btn btn-secondary">
-                            <i class="fas fa-download"></i>
-                            <span>Download Resume (PDF)</span>
-                            <div class="btn-ripple"></div>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -601,16 +407,9 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="contact-bg">
-            <div class="network-lines"></div>
-            <div class="connection-nodes"></div>
-        </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-text">Let's Connect and Collaborate</span>
-                    <div class="title-underline"></div>
-                </h2>
+                <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
             </div>
             <div class="contact-content">
@@ -618,17 +417,15 @@
                     <div class="contact-item" data-aos="fade-right">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
-                            <div class="icon-glow"></div>
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
                             <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-right">
+                    <div class="contact-item" data-aos="fade-right" data-delay="200">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
-                            <div class="icon-glow"></div>
                         </div>
                         <div class="contact-details">
                             <h4>Phone</h4>
@@ -638,62 +435,40 @@
                     <div class="contact-item" data-aos="fade-left">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
-                            <div class="icon-glow"></div>
                         </div>
                         <div class="contact-details">
                             <h4>LinkedIn</h4>
                             <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-left">
+                    <div class="contact-item" data-aos="fade-left" data-delay="200">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
-                            <div class="icon-glow"></div>
                         </div>
                         <div class="contact-details">
                             <h4>GitHub</h4>
-                            <a href="https://github.com/iambhavesh55" target="_blank">View my repositories</a>
+                            <a href="https://github.com/iambhavesh55" target="_blank">View repositories</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form-section" data-aos="fade-up">
-                    <div class="form-header">
-                        <h3>Send me a message</h3>
-                        <div class="form-status">
-                            <div class="status-indicator"></div>
-                            <span>Ready to receive</span>
-                        </div>
-                    </div>
+                <div class="contact-form-container" data-aos="fade-up">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <div class="input-container">
-                                <input type="text" id="name" name="name" required>
-                                <div class="input-glow"></div>
-                                <div class="floating-label">Enter your name</div>
-                            </div>
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <div class="input-container">
-                                <input type="email" id="email" name="email" required>
-                                <div class="input-glow"></div>
-                                <div class="floating-label">Enter your email</div>
-                            </div>
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <div class="input-container">
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <div class="input-glow"></div>
-                                <div class="floating-label">Enter your message</div>
-                            </div>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>Send Message</span>
-                            <div class="btn-glow"></div>
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-bg"></div>
+                            <div class="btn-particles"></div>
                         </button>
                     </form>
                 </div>
@@ -703,53 +478,31 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-bg">
-            <div class="footer-pattern"></div>
-        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
                     <p>&copy; 2024 Bhavesh Chaudhary. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Service</a>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/iambhavesh55" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:iambhavesh55@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                        <div class="link-glow"></div>
-                    </a>
-                    <a href="https://github.com/iambhavesh55" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                        <div class="link-glow"></div>
-                    </a>
-                    <a href="mailto:iambhavesh55@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                        <div class="link-glow"></div>
-                    </a>
-                </div>
             </div>
-        </div>
-        <div class="back-to-top" id="backToTop">
-            <i class="fas fa-chevron-up"></i>
-            <div class="btn-glow"></div>
         </div>
     </footer>
 
-    <!-- Resume Modal -->
-    <div id="resumeModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Resume Preview</h2>
-                <span class="close" onclick="closeResumeModal()">
-                    <i class="fas fa-times"></i>
-                </span>
-            </div>
-            <div class="modal-body">
-                <iframe src="Bhavesh_Chaudhary_IT_Resume.pdf" width="100%" height="600px"></iframe>
-            </div>
-        </div>
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
     </div>
 
     <script src="script.js"></script>
