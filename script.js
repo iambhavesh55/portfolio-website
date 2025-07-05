@@ -1,4 +1,4 @@
-// Modern Portfolio JavaScript
+// Modern Portfolio JavaScript - Fixed Version
 
 // Global Variables
 let isLoading = true;
@@ -7,8 +7,8 @@ let currentSection = 'hero';
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing portfolio...');
     initializeLoading();
-    initializeCursor();
     initializeNavigation();
     initializeScrollEffects();
     initializeAnimations();
@@ -18,15 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeParticles();
 });
 
-// Loading Screen
+// Loading Screen - Fixed
 function initializeLoading() {
+    console.log('Initializing loading screen...');
     const loadingScreen = document.getElementById('loadingScreen');
     const loadingProgress = document.querySelector('.loading-progress');
+    
+    if (!loadingScreen || !loadingProgress) {
+        console.error('Loading elements not found');
+        return;
+    }
     
     // Simulate loading progress
     let progress = 0;
     const interval = setInterval(() => {
-        progress += Math.random() * 15;
+        progress += Math.random() * 20 + 5; // Faster progress
         if (progress >= 100) {
             progress = 100;
             clearInterval(interval);
@@ -35,50 +41,11 @@ function initializeLoading() {
                 loadingScreen.classList.add('hidden');
                 isLoading = false;
                 startAnimations();
+                console.log('Loading complete!');
             }, 500);
         }
         loadingProgress.style.width = progress + '%';
-    }, 100);
-}
-
-// Custom Cursor
-function initializeCursor() {
-    const cursor = document.getElementById('cursor');
-    const cursorDot = cursor.querySelector('.cursor-dot');
-    const cursorRing = cursor.querySelector('.cursor-ring');
-    
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-    });
-    
-    function animateRing() {
-        ringX += (mouseX - ringX) * 0.1;
-        ringY += (mouseY - ringY) * 0.1;
-        
-        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
-        requestAnimationFrame(animateRing);
-    }
-    
-    animateRing();
-    
-    // Cursor interactions
-    const interactiveElements = document.querySelectorAll('a, button, .btn, .nav-link, .skill-item, .project-card');
-    
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorRing.style.transform += ' scale(1.5)';
-        });
-        
-        el.addEventListener('mouseleave', () => {
-            cursorRing.style.transform = cursorRing.style.transform.replace(' scale(1.5)', '');
-        });
-    });
+    }, 150); // Faster intervals
 }
 
 // Navigation
@@ -87,6 +54,11 @@ function initializeNavigation() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (!navbar || !navToggle || !navMenu) {
+        console.error('Navigation elements not found');
+        return;
+    }
     
     // Mobile menu toggle
     navToggle.addEventListener('click', () => {
@@ -180,6 +152,11 @@ function updateActiveNavLink() {
 function initializeScrollEffects() {
     const scrollProgressBar = document.querySelector('.scroll-progress');
     
+    if (!scrollProgressBar) {
+        console.error('Scroll progress bar not found');
+        return;
+    }
+    
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -215,11 +192,14 @@ function initializeAnimations() {
 
 // Start animations after loading
 function startAnimations() {
+    console.log('Starting animations...');
+    
     // Hero title animation
     const titleLines = document.querySelectorAll('.title-line');
     titleLines.forEach((line, index) => {
         setTimeout(() => {
-            line.style.animation = `titleSlide 1s ease-out forwards`;
+            line.style.opacity = '1';
+            line.style.transform = 'translateY(0)';
         }, index * 200);
     });
     
@@ -236,6 +216,11 @@ function initializeCounters() {
 
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number[data-target]');
+    
+    if (counters.length === 0) {
+        console.error('No counter elements found');
+        return;
+    }
     
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
@@ -264,7 +249,10 @@ function animateCounters() {
 // Contact Form
 function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
-    if (!contactForm) return;
+    if (!contactForm) {
+        console.log('Contact form not found');
+        return;
+    }
 
     // Form submission
     contactForm.addEventListener('submit', function(e) {
@@ -366,6 +354,11 @@ function showNotification(message, type = 'info') {
 function initializeBackToTop() {
     const backToTop = document.getElementById('backToTop');
     
+    if (!backToTop) {
+        console.log('Back to top button not found');
+        return;
+    }
+    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             backToTop.classList.add('visible');
@@ -387,7 +380,10 @@ function initializeParticles() {
 
 function createFloatingParticles() {
     const particleContainer = document.querySelector('.floating-particles');
-    if (!particleContainer) return;
+    if (!particleContainer) {
+        console.log('Particle container not found');
+        return;
+    }
 
     for (let i = 0; i < 30; i++) {
         const particle = document.createElement('div');
@@ -409,7 +405,10 @@ function createFloatingParticles() {
 
 function createMatrixEffect() {
     const matrixContainer = document.querySelector('.matrix-rain');
-    if (!matrixContainer) return;
+    if (!matrixContainer) {
+        console.log('Matrix container not found');
+        return;
+    }
 
     // Create matrix columns
     for (let i = 0; i < 20; i++) {
@@ -572,8 +571,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
         img.addEventListener('error', function() {
-            this.style.display = 'none';
             console.warn('Failed to load image:', this.src);
+            // Don't hide the image, just log the error
+        });
+        
+        img.addEventListener('load', function() {
+            console.log('Image loaded successfully:', this.src);
         });
     });
 });
@@ -596,3 +599,14 @@ if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').m
     document.documentElement.style.setProperty('--transition-base', '0s');
     document.documentElement.style.setProperty('--transition-slow', '0s');
 }
+
+// Force loading screen to disappear if it takes too long
+setTimeout(() => {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+        console.log('Force removing loading screen...');
+        loadingScreen.classList.add('hidden');
+        isLoading = false;
+        startAnimations();
+    }
+}, 5000); // 5 second fallback
