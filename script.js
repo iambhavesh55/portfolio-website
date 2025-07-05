@@ -8,7 +8,27 @@ let currentSection = 'hero';
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing portfolio...');
-    initializeLoading();
+    
+    // Force remove loading screen immediately if it exists
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        console.log('Found loading screen, removing it...');
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            isLoading = false;
+            console.log('Loading screen removed, starting portfolio...');
+            startPortfolio();
+        }, 1000); // Show loading for 1 second
+    } else {
+        console.log('No loading screen found, starting portfolio directly...');
+        isLoading = false;
+        startPortfolio();
+    }
+});
+
+// Start the main portfolio functionality
+function startPortfolio() {
+    console.log('Starting portfolio functionality...');
     initializeNavigation();
     initializeScrollEffects();
     initializeAnimations();
@@ -16,61 +36,36 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
     initializeBackToTop();
     initializeParticles();
-});
-
-// Loading Screen - Fixed
-function initializeLoading() {
-    console.log('Initializing loading screen...');
-    const loadingScreen = document.getElementById('loadingScreen');
-    const loadingProgress = document.querySelector('.loading-progress');
-    
-    if (!loadingScreen || !loadingProgress) {
-        console.error('Loading elements not found');
-        return;
-    }
-    
-    // Simulate loading progress
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 20 + 5; // Faster progress
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            
-            setTimeout(() => {
-                loadingScreen.classList.add('hidden');
-                isLoading = false;
-                startAnimations();
-                console.log('Loading complete!');
-            }, 500);
-        }
-        loadingProgress.style.width = progress + '%';
-    }, 150); // Faster intervals
+    startAnimations();
 }
 
 // Navigation
 function initializeNavigation() {
+    console.log('Initializing navigation...');
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    if (!navbar || !navToggle || !navMenu) {
-        console.error('Navigation elements not found');
+    if (!navbar) {
+        console.error('Navbar not found');
         return;
     }
     
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    });
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            console.log('Mobile menu toggled');
+        });
+    }
     
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
         });
     });
     
@@ -98,6 +93,8 @@ function initializeNavigation() {
         
         updateActiveNavLink();
     });
+    
+    console.log('Navigation initialized successfully');
 }
 
 // Smooth scroll function
@@ -150,6 +147,7 @@ function updateActiveNavLink() {
 
 // Scroll Effects
 function initializeScrollEffects() {
+    console.log('Initializing scroll effects...');
     const scrollProgressBar = document.querySelector('.scroll-progress');
     
     if (!scrollProgressBar) {
@@ -163,10 +161,13 @@ function initializeScrollEffects() {
         scrollProgress = (scrollTop / docHeight) * 100;
         scrollProgressBar.style.width = scrollProgress + '%';
     });
+    
+    console.log('Scroll effects initialized');
 }
 
 // Animations
 function initializeAnimations() {
+    console.log('Initializing animations...');
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
@@ -185,7 +186,10 @@ function initializeAnimations() {
     }, observerOptions);
 
     // Observe all elements with data-aos attributes
-    document.querySelectorAll('[data-aos]').forEach(el => {
+    const animatedElements = document.querySelectorAll('[data-aos]');
+    console.log(`Found ${animatedElements.length} elements to animate`);
+    
+    animatedElements.forEach(el => {
         observer.observe(el);
     });
 }
@@ -211,6 +215,7 @@ function startAnimations() {
 
 // Animated counters
 function initializeCounters() {
+    console.log('Initializing counters...');
     // This will be called from startAnimations
 }
 
@@ -221,6 +226,8 @@ function animateCounters() {
         console.error('No counter elements found');
         return;
     }
+    
+    console.log(`Found ${counters.length} counters to animate`);
     
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
@@ -248,6 +255,7 @@ function animateCounters() {
 
 // Contact Form
 function initializeContactForm() {
+    console.log('Initializing contact form...');
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) {
         console.log('Contact form not found');
@@ -273,6 +281,8 @@ function initializeContactForm() {
             }
         });
     });
+    
+    console.log('Contact form initialized');
 }
 
 function handleFormSubmission(form) {
@@ -352,6 +362,7 @@ function showNotification(message, type = 'info') {
 
 // Back to Top
 function initializeBackToTop() {
+    console.log('Initializing back to top...');
     const backToTop = document.getElementById('backToTop');
     
     if (!backToTop) {
@@ -370,10 +381,13 @@ function initializeBackToTop() {
     backToTop.addEventListener('click', () => {
         smoothScrollTo(0, 800);
     });
+    
+    console.log('Back to top initialized');
 }
 
 // Particles
 function initializeParticles() {
+    console.log('Initializing particles...');
     createFloatingParticles();
     createMatrixEffect();
 }
@@ -600,13 +614,17 @@ if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').m
     document.documentElement.style.setProperty('--transition-slow', '0s');
 }
 
-// Force loading screen to disappear if it takes too long
+// Force loading screen to disappear if it takes too long (fallback)
 setTimeout(() => {
     const loadingScreen = document.getElementById('loadingScreen');
     if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
-        console.log('Force removing loading screen...');
+        console.log('Force removing loading screen (fallback)...');
         loadingScreen.classList.add('hidden');
         isLoading = false;
-        startAnimations();
+        if (typeof startPortfolio === 'function') {
+            startPortfolio();
+        }
     }
-}, 5000); // 5 second fallback
+}, 3000); // 3 second fallback
+
+console.log('Portfolio JavaScript loaded successfully');
