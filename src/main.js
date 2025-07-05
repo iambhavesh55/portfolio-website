@@ -549,33 +549,69 @@ function handleFormSubmission(form) {
             return;
         }
 
-        // Create mailto link
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-        const mailtoLink = `mailto:iambhavesh55@gmail.com?subject=${subject}&body=${body}`;
-
-        // Open email client
-        window.location.href = mailtoLink;
-
-        // Reset form and show success message
-        form.reset();
-        showNotification('Thank you for your message! Your email client should open with the message ready to send.', 'success');
-
-        // Enhanced submit button animation
+        // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalHTML = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="btn-text"><i class="fas fa-check"></i> Message Sent!</span>';
-        submitBtn.style.background = 'var(--gradient-secondary)';
-        submitBtn.style.transform = 'scale(1.05)';
+        submitBtn.innerHTML = '<span class="btn-text"><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
 
-        setTimeout(() => {
+        // Submit form using fetch API
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                // Success
+                form.reset();
+                showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+                
+                // Success button animation
+                submitBtn.innerHTML = '<span class="btn-text"><i class="fas fa-check"></i> Message Sent!</span>';
+                submitBtn.style.background = 'var(--gradient-secondary)';
+                submitBtn.style.transform = 'scale(1.05)';
+                submitBtn.style.opacity = '1';
+                
+                // Reset form labels
+                const formGroups = form.querySelectorAll('.form-group');
+                formGroups.forEach(group => {
+                    group.classList.remove('focused');
+                });
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalHTML;
+                    submitBtn.style.background = '';
+                    submitBtn.style.transform = 'scale(1)';
+                    submitBtn.disabled = false;
+                }, 3000);
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            console.error('Form submission error:', error);
+            showNotification('There was an error sending your message. Please try again.', 'error');
+            
+            // Reset button on error
             submitBtn.innerHTML = originalHTML;
-            submitBtn.style.background = '';
-            submitBtn.style.transform = 'scale(1)';
-        }, 3000);
+            submitBtn.style.opacity = '1';
+            submitBtn.disabled = false;
+        });
+
     } catch (error) {
         console.error('Error handling form submission:', error);
         showNotification('There was an error sending your message. Please try again.', 'error');
+        
+        // Reset button on error
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.innerHTML = '<span class="btn-text">Send Message</span>';
+            submitBtn.style.opacity = '1';
+            submitBtn.disabled = false;
+        }
     }
 }
 

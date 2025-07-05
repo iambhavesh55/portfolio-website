@@ -6,8 +6,8 @@
     <title>Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script type="module" crossorigin src="./assets/index-BO_TE8qh.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DfL7wAFG.css">
+  <script type="module" crossorigin src="./assets/index-D0cJYFLQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DxDm1X1Y.css">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -558,7 +558,13 @@
                     </div>
                 </div>
                 <div class="contact-form-container" data-aos="fade-up">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Hidden field for spam protection -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
+                        
                         <div class="form-group">
                             <input type="text" id="name" name="name" required>
                             <label for="name">Your Name</label>
@@ -571,6 +577,10 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                             <label for="message">Your Message</label>
                         </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="form-messages" class="form-messages" style="display: none;"></div>
+                        
                         <button type="submit" class="btn btn-primary">
                             <span class="btn-text">Send Message</span>
                             <div class="btn-bg"></div>
