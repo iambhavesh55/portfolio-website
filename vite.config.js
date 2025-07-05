@@ -1,14 +1,9 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: {
-        main: 'index.html'
-      }
-    }
+    assetsDir: 'assets'
   },
   publicDir: 'public',
   base: './',
@@ -16,4 +11,4 @@ export default defineConfig({
     port: 3000,
     host: true
   }
-})
+});
