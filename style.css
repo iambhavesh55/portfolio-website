@@ -1899,6 +1899,19 @@ section {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+    
+    .blog-filters {
+        gap: var(--space-sm);
+    }
+    
+    .blog-filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.8rem;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
