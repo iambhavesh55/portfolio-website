@@ -196,6 +196,8 @@ function initializeCounters() {
 
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
+    if (isNaN(target)) return;
+    
     const duration = 2000;
     const start = performance.now();
 
@@ -205,12 +207,12 @@ function animateCounter(element) {
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         const current = Math.floor(target * easeOutQuart);
 
-        element.textContent = current + (target > current ? '+' : '');
+        element.textContent = current;
 
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target + '+';
+            element.textContent = target;
         }
     }
 
