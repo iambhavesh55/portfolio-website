@@ -4,40 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
-    <meta name="description" content="Bhavesh Chaudhary's professional portfolio showcasing cybersecurity, data analytics, ethical hacking, and programming projects." />
-    <meta name="keywords" content="cybersecurity, data analyst, ethical hacking, programming, portfolio, Bhavesh Chaudhary" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Bhavesh Chaudhary" />
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bhaveshchaudhary.com/" />
-    <meta property="og:title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
-    <meta property="og:description" content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." />
-    <meta property="og:image" content="/social-share-preview.png" />
-    <meta property="og:site_name" content="Bhavesh Chaudhary Portfolio" />
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://bhaveshchaudhary.com/" />
-    <meta name="twitter:title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
-    <meta name="twitter:description" content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." />
-    <meta name="twitter:image" content="/social-share-preview.png" />
-    
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#00f5ff" />
-    <link rel="canonical" href="https://bhaveshchaudhary.com/" />
-    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Library for Scroll Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -101,18 +70,10 @@
                 </a>
             </div>
             <div class="nav-actions">
-                <!-- Multi-Theme Toggle -->
-                <div class="theme-selector" id="themeSelector">
-                    <button class="theme-btn active" data-theme="dark" title="Dark Mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="theme-btn" data-theme="dimmed" title="Dimmed Mode">
-                        <i class="fas fa-adjust"></i>
-                    </button>
-                    <button class="theme-btn" data-theme="neon" title="Neon Mode">
-                        <i class="fas fa-bolt"></i>
-                    </button>
-                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
                 <div class="nav-toggle" id="navToggle">
                     <span></span>
                     <span></span>
@@ -136,7 +97,7 @@
                         <span class="title-line">Chaudhary</span>
                     </h1>
                     <div class="hero-subtitle">
-                        <span class="typing-text" id="typedText"></span>
+                        <span class="typing-text" id="typingText"></span>
                     </div>
                     <p class="hero-description">
                         Passionate about ethical hacking, data analytics, and cybersecurity. 
@@ -220,29 +181,29 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about" data-aos="fade-up">
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-header">
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Discover my journey in technology and cybersecurity</p>
             </div>
             <div class="about-content">
                 <div class="about-cards">
-                    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-card" data-aos="fade-up" data-delay="0">
                         <div class="card-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3>Education</h3>
                         <p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
                     </div>
-                    <div class="about-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="about-card" data-aos="fade-up" data-delay="200">
                         <div class="card-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
                         <h3>Experience</h3>
                         <p>Completed Professional Year in ICT and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
                     </div>
-                    <div class="about-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="about-card" data-aos="fade-up" data-delay="400">
                         <div class="card-icon">
                             <i class="fas fa-target"></i>
                         </div>
@@ -261,14 +222,14 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience" data-aos="fade-up">
+    <section id="experience" class="experience">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-header">
                 <h2 class="section-title">Professional Experience</h2>
                 <p class="section-subtitle">My journey in the tech industry</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item" data-aos="slide-right" data-aos-delay="200">
+                <div class="timeline-item" data-aos="slide-right">
                     <div class="timeline-date">July 2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
@@ -287,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="slide-left" data-aos-delay="400">
+                <div class="timeline-item" data-aos="slide-left">
                     <div class="timeline-date">2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
@@ -316,15 +277,15 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects" data-aos="fade-up">
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">A showcase of my recent work and achievements</p>
             </div>
             
             <!-- Project Filters -->
-            <div class="project-filters" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-filters" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="data-science">Data Science</button>
                 <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
@@ -333,7 +294,7 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-category="data-science">
+                <div class="project-card" data-aos="zoom-in" data-category="data-science">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-chart-line"></i>
@@ -372,7 +333,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="400" data-category="college">
+                <div class="project-card" data-aos="zoom-in" data-delay="200" data-category="college">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -396,7 +357,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="500" data-category="web-dev">
+                <div class="project-card" data-aos="zoom-in" data-delay="400" data-category="web-dev">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-globe"></i>
@@ -422,7 +383,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="600" data-category="cybersecurity">
+                <div class="project-card" data-aos="zoom-in" data-delay="600" data-category="cybersecurity">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-shield-alt"></i>
@@ -457,109 +418,73 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills" data-aos="fade-up">
+    <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-header">
                 <h2 class="section-title">Technical Skills</h2>
                 <p class="section-subtitle">Technologies and tools I work with</p>
             </div>
             <div class="skills-container">
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="skills-category" data-aos="fade-up">
                     <h3>Programming Languages</h3>
-                    <div class="skills-grid" id="programmingSkills">
-                        <div class="skill-item" data-skill="90">
+                    <div class="skills-grid">
+                        <div class="skill-item">
                             <i class="fab fa-python"></i>
                             <span>Python</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="90"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="75">
+                        <div class="skill-item">
                             <i class="fab fa-java"></i>
                             <span>Java</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="75"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="85">
+                        <div class="skill-item">
                             <i class="fas fa-database"></i>
                             <span>SQL</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="85"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="80">
+                        <div class="skill-item">
                             <i class="fab fa-html5"></i>
                             <span>HTML</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="80"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="75">
+                        <div class="skill-item">
                             <i class="fab fa-css3-alt"></i>
                             <span>CSS</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="75"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+                <div class="skills-category" data-aos="fade-up" data-delay="200">
                     <h3>Tools & Technologies</h3>
-                    <div class="skills-grid" id="toolsSkills">
-                        <div class="skill-item" data-skill="85">
+                    <div class="skills-grid">
+                        <div class="skill-item">
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="85"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="90">
+                        <div class="skill-item">
                             <i class="fas fa-code"></i>
                             <span>VS Code</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="90"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="80">
+                        <div class="skill-item">
                             <i class="fas fa-chart-bar"></i>
                             <span>Power BI</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="80"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="70">
+                        <div class="skill-item">
                             <i class="fas fa-chart-line"></i>
                             <span>Tableau</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="70"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="600">
+                <div class="skills-category" data-aos="fade-up" data-delay="400">
                     <h3>Cybersecurity</h3>
-                    <div class="skills-grid" id="securitySkills">
-                        <div class="skill-item" data-skill="75">
+                    <div class="skills-grid">
+                        <div class="skill-item">
                             <i class="fas fa-shield-alt"></i>
                             <span>Ethical Hacking</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="75"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="80">
+                        <div class="skill-item">
                             <i class="fas fa-network-wired"></i>
                             <span>Networking</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="80"></div>
-                            </div>
                         </div>
-                        <div class="skill-item" data-skill="70">
+                        <div class="skill-item">
                             <i class="fas fa-bug"></i>
                             <span>Security Testing</span>
-                            <div class="skill-progress">
-                                <div class="skill-bar" data-width="70"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -573,73 +498,16 @@
         </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section id="cta" class="cta" data-aos="fade-up">
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up" data-aos-delay="100">
-                <div class="cta-header">
-                    <h2 class="cta-title">Let's Work Together</h2>
-                    <p class="cta-subtitle">
-                        Ready to bring your cybersecurity and data analytics projects to life? 
-                        Let's collaborate and create something amazing together.
-                    </p>
-                </div>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
-                    <a href="./Bhavesh_Chaudhary_IT_Resume.pdf" target="_blank" class="btn btn-primary cta-btn" download>
-                        <span class="btn-text">
-                            <i class="fas fa-download"></i>
-                            Download Resume
-                        </span>
-                        <div class="btn-bg"></div>
-                        <div class="btn-particles"></div>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary cta-btn">
-                        <span class="btn-text">
-                            <i class="fas fa-handshake"></i>
-                            Hire Me
-                        </span>
-                        <div class="btn-bg"></div>
-                        <div class="btn-particles"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="cta-visual" data-aos="zoom-in" data-aos-delay="300">
-                <div class="cta-graphic">
-                    <div class="cta-circle"></div>
-                    <div class="cta-lines">
-                        <div class="cta-line"></div>
-                        <div class="cta-line"></div>
-                        <div class="cta-line"></div>
-                    </div>
-                    <div class="cta-dots">
-                        <div class="cta-dot"></div>
-                        <div class="cta-dot"></div>
-                        <div class="cta-dot"></div>
-                        <div class="cta-dot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section Divider -->
-        <div class="section-divider">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="contact" data-aos="fade-up">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-header">
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-item" data-aos="fade-right">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -648,7 +516,7 @@
                             <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="contact-item" data-aos="fade-right" data-delay="200">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -657,7 +525,7 @@
                             <span>+61 468 538 615</span>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="contact-item" data-aos="fade-left">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
@@ -666,7 +534,7 @@
                             <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-left" data-aos-delay="500">
+                    <div class="contact-item" data-aos="fade-left" data-delay="200">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -676,7 +544,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-form-container" data-aos="fade-up">
                     <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <!-- Hidden field for spam protection -->
                         <input type="hidden" name="form-name" value="contact" />
@@ -764,26 +632,6 @@
 
     <!-- Tooltip -->
     <div class="tooltip" id="tooltip"></div>
-
-    <!-- Terminal Easter Egg -->
-    <div class="terminal-overlay" id="terminalOverlay">
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-controls">
-                    <span class="terminal-btn close" id="terminalClose"></span>
-                    <span class="terminal-btn minimize"></span>
-                    <span class="terminal-btn maximize"></span>
-                </div>
-                <div class="terminal-title">Bhavesh@portfolio:~$</div>
-            </div>
-            <div class="terminal-body" id="terminalBody">
-                <div class="terminal-line">
-                    <span class="terminal-prompt">bhavesh@portfolio:~$</span>
-                    <span class="terminal-cursor">_</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script type="module" src="/src/main.js"></script>
 </body>
