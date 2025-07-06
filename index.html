@@ -1,756 +1,782 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bhavesh Chaudhary - Cybersecurity Specialist &amp; Data Analyst</title>
-<!-- SEO Meta Tags -->
-<meta content="Bhavesh Chaudhary - Cybersecurity Specialist &amp; Data Analyst" name="title">
-<meta content="Bhavesh Chaudhary's professional portfolio showcasing cybersecurity, data analytics, ethical hacking, and programming projects." name="description">
-<meta content="cybersecurity, data analyst, ethical hacking, python, machine learning, portfolio, bhavesh chaudhary" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="English" name="language"/>
-<meta content="Bhavesh Chaudhary" name="author"/>
-<!-- Open Graph / Facebook -->
-<meta content="website" property="og:type"/>
-<meta content="https://bhaveshchaudhary.com/" property="og:url"/>
-<meta content="Bhavesh Chaudhary - Cybersecurity Specialist &amp; Data Analyst" property="og:title"/>
-<meta content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." property="og:description"/>
-<meta content="/social-share-preview.png" property="og:image"/>
-<meta content="Bhavesh Chaudhary Portfolio" property="og:site_name"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://bhaveshchaudhary.com/" name="twitter:url"/>
-<meta content="Bhavesh Chaudhary - Cybersecurity Specialist &amp; Data Analyst" name="twitter:title"/>
-<meta content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." name="twitter:description"/>
-<meta content="/social-share-preview.png" name="twitter:image"/>
-<!-- Additional SEO -->
-<link href="https://bhaveshchaudhary.com/" rel="canonical"/>
-<meta content="#00f5ff" name="theme-color"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-</meta></meta></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
+    <meta name="description" content="Bhavesh Chaudhary's professional portfolio showcasing cybersecurity, data analytics, ethical hacking, and programming projects." />
+    <meta name="keywords" content="cybersecurity, data analyst, ethical hacking, python, machine learning, portfolio, bhavesh chaudhary" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Bhavesh Chaudhary" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bhaveshchaudhary.com/" />
+    <meta property="og:title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
+    <meta property="og:description" content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." />
+    <meta property="og:image" content="/social-share-preview.png" />
+    <meta property="og:site_name" content="Bhavesh Chaudhary Portfolio" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://bhaveshchaudhary.com/" />
+    <meta name="twitter:title" content="Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" />
+    <meta name="twitter:description" content="Explore Bhavesh Chaudhary's cybersecurity, data analytics, and programming projects." />
+    <meta name="twitter:image" content="/social-share-preview.png" />
+    
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://bhaveshchaudhary.com/" />
+    <meta name="theme-color" content="#00f5ff" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<!-- Loading Screen -->
-<div class="loading-screen" id="loadingScreen">
-<div class="loading-content">
-<div class="loading-logo">BC</div>
-<div class="loading-text">Initializing Portfolio...</div>
-<div class="loading-bar">
-<div class="loading-progress"></div>
-</div>
-</div>
-</div>
-<!-- Cursor -->
-<div class="custom-cursor" id="cursor">
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-</div>
-<!-- Scroll Progress -->
-<div class="scroll-progress" id="scrollProgress"></div>
-<!-- Background Effects -->
-<div class="bg-effects">
-<div class="matrix-rain"></div>
-<div class="floating-particles"></div>
-<div class="grid-overlay"></div>
-</div>
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-<div class="nav-container">
-<div class="nav-logo">
-<span class="logo-text">BC</span>
-<div class="logo-glow"></div>
-</div>
-<div class="nav-menu" id="navMenu">
-<a class="nav-link active" data-section="hero" href="#hero">
-<span class="nav-text">Home</span>
-<div class="nav-indicator"></div>
-</a>
-<a class="nav-link" data-section="about" href="#about">
-<span class="nav-text">About</span>
-<div class="nav-indicator"></div>
-</a>
-<a class="nav-link" data-section="experience" href="#experience">
-<span class="nav-text">Experience</span>
-<div class="nav-indicator"></div>
-</a>
-<a class="nav-link" data-section="projects" href="#projects">
-<span class="nav-text">Projects</span>
-<div class="nav-indicator"></div>
-</a>
-<a class="nav-link" data-section="skills" href="#skills">
-<span class="nav-text">Skills</span>
-<div class="nav-indicator"></div>
-</a>
-<a class="nav-link" data-section="contact" href="#contact">
-<span class="nav-text">Contact</span>
-<div class="nav-indicator"></div>
-</a>
-</div>
-<div class="nav-actions">
-<button aria-label="Toggle theme" class="theme-toggle" id="themeToggle">
-<i class="fas fa-moon"></i>
-<i class="fas fa-sun"></i>
-</button>
-<div class="nav-toggle" id="navToggle">
-<span></span>
-<span></span>
-<span></span>
-</div>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="hero" id="hero">
-<div class="hero-container">
-<div class="hero-content">
-<div class="hero-text">
-<div class="hero-greeting">
-<span class="greeting-text">Hello, I'm</span>
-<div class="greeting-cursor"></div>
-</div>
-<h1 class="hero-title">
-<span class="title-line">Bhavesh</span>
-<span class="title-line">Chaudhary</span>
-</h1>
-<div class="hero-subtitle">
-<span class="typing-text" id="typingText"></span>
-</div>
-<p class="hero-description">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">BC</div>
+            <div class="loading-text">Initializing Portfolio...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="matrix-rain"></div>
+        <div class="floating-particles"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BC</span>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active" data-section="hero">
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="nav-text">About</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <span class="nav-text">Experience</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <span class="nav-text">Skills</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="greeting-cursor"></div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Bhavesh</span>
+                        <span class="title-line">Chaudhary</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                    </div>
+                    <p class="hero-description">
                         Passionate about ethical hacking, data analytics, and cybersecurity. 
                         Business Information Systems graduate with hands-on experience in 
                         data analysis and machine learning.
                     </p>
-<div class="hero-stats">
-<div class="stat-item">
-<span class="stat-number" data-target="2">0</span>
-<span class="stat-label">Years Experience</span>
-</div>
-<div class="stat-item">
-<span class="stat-number" data-target="5">0</span>
-<span class="stat-label">Projects Completed</span>
-</div>
-<div class="stat-item">
-<span class="stat-number" data-target="10">0</span>
-<span class="stat-label">Technologies</span>
-</div>
-</div>
-<div class="hero-buttons">
-<a class="btn btn-primary" href="#projects">
-<span class="btn-text">View My Work</span>
-<div class="btn-bg"></div>
-<div class="btn-particles"></div>
-</a>
-<a class="btn btn-secondary" href="#contact">
-<span class="btn-text">Get In Touch</span>
-<div class="btn-bg"></div>
-</a>
-</div>
-</div>
-<div class="hero-visual">
-<div class="profile-container">
-<div class="profile-frame">
-<div class="frame-corners">
-<div class="corner corner-tl"></div>
-<div class="corner corner-tr"></div>
-<div class="corner corner-bl"></div>
-<div class="corner corner-br"></div>
-</div>
-<div class="profile-image">
-<img alt="Bhavesh Chaudhary" class="profile-photo" src="public/WhatsApp Image 2025-07-01 at 10.39.10_a93cf03e.jpg"/>
-<div class="image-overlay"></div>
-</div>
-<div class="scan-lines"></div>
-</div>
-<div class="profile-data">
-<div class="data-stream">
-<div class="data-line"></div>
-<div class="data-line"></div>
-<div class="data-line"></div>
-</div>
-<div class="profile-info">
-<div class="info-item">
-<span class="info-label">Status:</span>
-<span class="info-value">Available</span>
-</div>
-<div class="info-item">
-<span class="info-label">Location:</span>
-<span class="info-value">Australia</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="scroll-indicator">
-<div class="scroll-text">Scroll to explore</div>
-<div class="scroll-arrow"></div>
-</div>
-<!-- Section Divider -->
-<div class="section-divider">
-<svg preserveaspectratio="none" viewbox="0 0 1200 120">
-<path class="shape-fill" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
-<path class="shape-fill" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
-<path class="shape-fill" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-</svg>
-</div>
-</section>
-<!-- About Section -->
-<section class="about" id="about">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">About Me</h2>
-<p class="section-subtitle">Discover my journey in technology and cybersecurity</p>
-</div>
-<div class="about-content">
-<div class="about-cards">
-<div class="about-card" data-aos="fade-up" data-delay="0">
-<div class="card-icon">
-<i class="fas fa-graduation-cap"></i>
-</div>
-<h3>Education</h3>
-<p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
-</div>
-<div class="about-card" data-aos="fade-up" data-delay="200">
-<div class="card-icon">
-<i class="fas fa-briefcase"></i>
-</div>
-<h3>Experience</h3>
-<p>Completed Professional Year in ICT and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
-</div>
-<div class="about-card" data-aos="fade-up" data-delay="400">
-<div class="card-icon">
-<i class="fas fa-target"></i>
-</div>
-<h3>Mission</h3>
-<p>Driven by curiosity to solve complex problems through data analysis and ethical hacking, becoming an expert in cybersecurity.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Section Divider -->
-<div class="section-divider reverse">
-<svg preserveaspectratio="none" viewbox="0 0 1200 120">
-<path class="shape-fill" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
-</svg>
-</div>
-</section>
-<!-- Experience Section -->
-<section class="experience" id="experience">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">Professional Experience</h2>
-<p class="section-subtitle">My journey in the tech industry</p>
-</div>
-<div class="timeline">
-<div class="timeline-item" data-aos="slide-right">
-<div class="timeline-date">July 2024 - October 2024</div>
-<div class="timeline-content">
-<div class="timeline-icon">
-<i class="fas fa-chart-line"></i>
-</div>
-<div class="timeline-info">
-<h3>Data Analyst Intern</h3>
-<h4>Advance Consultant Services By ACS</h4>
-<p>Worked on data analysis projects, developing analytical solutions, and contributing to data-driven decision making processes. Gained hands-on experience with real-world datasets and business intelligence tools.</p>
-<div class="timeline-skills">
-<span class="skill-tag">Data Analysis</span>
-<span class="skill-tag">Python</span>
-<span class="skill-tag">SQL</span>
-<span class="skill-tag">Power BI</span>
-</div>
-</div>
-</div>
-</div>
-<div class="timeline-item" data-aos="slide-left">
-<div class="timeline-date">2024 - October 2024</div>
-<div class="timeline-content">
-<div class="timeline-icon">
-<i class="fas fa-graduation-cap"></i>
-</div>
-<div class="timeline-info">
-<h3>Professional Year in ICT</h3>
-<h4>Completed - October 2024</h4>
-<p>Successfully completed Professional Year program enhancing technical skills and gaining practical experience in Information and Communication Technology.</p>
-<div class="timeline-skills">
-<span class="skill-tag">ICT</span>
-<span class="skill-tag">Professional Development</span>
-<span class="skill-tag">Industry Knowledge</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Section Divider -->
-<div class="section-divider">
-<svg preserveaspectratio="none" viewbox="0 0 1200 120">
-<path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-</svg>
-</div>
-</section>
-<!-- Projects Section -->
-<section class="projects" id="projects">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">Featured Projects</h2>
-<p class="section-subtitle">A showcase of my recent work and achievements</p>
-</div>
-<!-- Project Filters -->
-<div class="project-filters" data-aos="fade-up">
-<button class="filter-btn active" data-filter="all">All Projects</button>
-<button class="filter-btn" data-filter="data-science">Data Science</button>
-<button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-<button class="filter-btn" data-filter="web-dev">Web Development</button>
-<button class="filter-btn" data-filter="college">College Projects</button>
-</div>
-<div class="projects-grid">
-<div class="project-card" data-aos="zoom-in" data-category="data-science">
-<div class="project-header">
-<div class="project-icon">
-<i class="fas fa-chart-line"></i>
-</div>
-<span class="project-type">Data Science</span>
-</div>
-<div class="project-content">
-<h3>Customer Churn Prediction</h3>
-<p>Developed a machine learning model to predict customer churn for business decision-making during my internship. Handled complex data processing and optimized model accuracy through feature engineering.</p>
-<div class="project-tech">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">Pandas</span>
-<span class="tech-tag">Scikit-learn</span>
-<span class="tech-tag">Matplotlib</span>
-</div>
-<div class="project-results">
-<div class="result-item">
-<img alt="Confusion Matrix" class="result-image" src="public/confusion_matrix.png"/>
-<span>Confusion Matrix</span>
-</div>
-<div class="result-item">
-<img alt="ROC Curve" class="result-image" src="public/roc_curve.png"/>
-<span>ROC Curve (AUC = 0.83)</span>
-</div>
-</div>
-</div>
-<div class="project-links">
-<a class="project-link" href="https://github.com/Maniramluitel2056/Customer-Churn-Analysis" target="_blank">
-<i class="fab fa-github"></i>
-<span>View Code</span>
-</a>
-<a class="project-link internship-badge" href="#">
-<i class="fas fa-briefcase"></i>
-<span>Internship Project</span>
-</a>
-</div>
-</div>
-<div class="project-card" data-aos="zoom-in" data-category="college" data-delay="200">
-<div class="project-header">
-<div class="project-icon">
-<i class="fas fa-shopping-cart"></i>
-</div>
-<span class="project-type">College Project</span>
-</div>
-<div class="project-content">
-<h3>Buy and Sell System</h3>
-<p>Led a team to develop a comprehensive online platform enabling users to buy and sell various products. Managed team coordination, deadlines, and technical tasks.</p>
-<div class="project-tech">
-<span class="tech-tag">Business Systems</span>
-<span class="tech-tag">Databases</span>
-<span class="tech-tag">Team Management</span>
-</div>
-</div>
-<div class="project-links">
-<a class="project-link" href="https://github.com/iambhavesh55/Capestone_project" target="_blank">
-<i class="fab fa-github"></i>
-<span>View Code</span>
-</a>
-</div>
-</div>
-<div class="project-card" data-aos="zoom-in" data-category="web-dev" data-delay="400">
-<div class="project-header">
-<div class="project-icon">
-<i class="fas fa-globe"></i>
-</div>
-<span class="project-type">Web Development</span>
-</div>
-<div class="project-content">
-<h3>Personal Finance Dashboard</h3>
-<p>Full-stack web application for personal finance management with expense tracking, budget planning, and financial analytics. Features responsive design and real-time data visualization.</p>
-<div class="project-tech">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">Flask</span>
-<span class="tech-tag">JavaScript</span>
-<span class="tech-tag">Chart.js</span>
-<span class="tech-tag">SQLite</span>
-</div>
-</div>
-<div class="project-links">
-<a class="project-link coming-soon" href="#">
-<i class="fas fa-clock"></i>
-<span>Coming Soon</span>
-</a>
-<a class="project-link in-development" href="#">
-<i class="fas fa-code"></i>
-<span>In Development</span>
-</a>
-</div>
-</div>
-<div class="project-card" data-aos="zoom-in" data-category="cybersecurity" data-delay="600">
-<div class="project-header">
-<div class="project-icon">
-<i class="fas fa-shield-alt"></i>
-</div>
-<span class="project-type">Cybersecurity</span>
-</div>
-<div class="project-content">
-<h3>Network Security Analysis</h3>
-<p>Comprehensive security assessment and penetration testing project. Identified vulnerabilities and provided security recommendations for network infrastructure.</p>
-<div class="project-tech">
-<span class="tech-tag">Ethical Hacking</span>
-<span class="tech-tag">Network Analysis</span>
-<span class="tech-tag">Security Testing</span>
-<span class="tech-tag">Risk Assessment</span>
-</div>
-</div>
-<div class="project-links">
-<a class="project-link coming-soon" href="#">
-<i class="fas fa-clock"></i>
-<span>Coming Soon</span>
-</a>
-<a class="project-link in-development" href="#">
-<i class="fas fa-code"></i>
-<span>In Development</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Section Divider -->
-<div class="section-divider reverse">
-<svg preserveaspectratio="none" viewbox="0 0 1200 120">
-<path class="shape-fill" d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"></path>
-</svg>
-</div>
-</section>
-<!-- Skills Section -->
-<section class="skills" id="skills">
-<div class="skills-particles"></div>
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">Technical Skills</h2>
-<p class="section-subtitle">Technologies and tools I work with</p>
-</div>
-<div class="skills-container">
-<div class="skills-category programming-languages" data-aos="fade-up">
-<h3>Programming Languages</h3>
-<div class="skills-grid">
-<div class="skill-item" data-skill="python">
-<svg class="skill-logo" viewbox="0 0 256 255" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<lineargradient id="a" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-<stop offset="0%" stop-color="#387EB8"></stop>
-<stop offset="100%" stop-color="#366994"></stop>
-</lineargradient>
-<lineargradient id="b" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-<stop offset="0%" stop-color="#FFE052"></stop>
-<stop offset="100%" stop-color="#FFC331"></stop>
-</lineargradient>
-</defs>
-<path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z" fill="url(#a)"></path>
-<path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z" fill="url(#b)"></path>
-</svg>
-<img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="width: 48px; height: 48px;"/>
-<span>Python</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="90"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="java">
-<svg class="skill-logo" viewbox="0 0 256 346" xmlns="http://www.w3.org/2000/svg">
-<path d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034 0 0 7.93 4.972 19.003 9.279-67.611 28.977-153.019-1.679-99.913-16.517" fill="#5382A1"></path>
-<path d="M74.292 230.846s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43 0 0 5.526 5.602 14.215 8.666-81.747 23.904-172.798 1.885-114.296-17.532" fill="#5382A1"></path>
-<path d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858 0 0-118.238 29.53-61.765 94.6" fill="#E76F00"></path>
-<path d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471-12.323-5.36 10.787-12.8 18.056-14.362 7.581-1.644 11.914-1.337 11.914-1.337-13.705-9.655-88.583 18.957-38.034 27.15 137.853 22.356 251.292-10.066 215.535-26.195" fill="#5382A1"></path>
-<path d="M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.030-.89 25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183 29.981-14.492 54.358-12.848 54.358-12.848" fill="#5382A1"></path>
-<path d="M201.506 253.422c64.8-33.672 34.839-66.03 13.927-61.67-5.126 1.07-7.411 1.998-7.411 1.998s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647 0 .001 1.003-.895 1.302-1.705" fill="#5382A1"></path>
-<path d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37" fill="#E76F00"></path>
-<path d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64 0 0-4.348 11.158-51.404 20.018-53.088 9.99-118.564 8.824-157.399 2.421.001 0 7.95 6.58 48.829 9.201" fill="#5382A1"></path>
-</svg>
-<img alt="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" style="width: 48px; height: 48px;"/>
-<span>Java</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="75"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="sql">
-<svg class="skill-logo" viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#00758F" height="256" rx="15" width="256"></rect>
-<path d="M128 32c-53.02 0-96 21.49-96 48v96c0 26.51 42.98 48 96 48s96-21.49 96-48V80c0-26.51-42.98-48-96-48z" fill="#fff"></path>
-<ellipse cx="128" cy="80" fill="#00758F" rx="96" ry="48"></ellipse>
-<path d="M32 80v96c0 26.51 42.98 48 96 48s96-21.49 96-48V80" fill="none" stroke="#fff" stroke-width="8"></path>
-<path d="M32 128v48c0 26.51 42.98 48 96 48s96-21.49 96-48v-48" fill="none" stroke="#fff" stroke-width="8"></path>
-<text fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" x="128" y="140">SQL</text>
-</svg>
-<img alt="SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" style="width: 48px; height: 48px;"/>
-<span>SQL</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="70"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="html">
-<svg class="skill-logo" viewbox="0 0 256 361" xmlns="http://www.w3.org/2000/svg">
-<path d="M255.555 70.766l-23.241 260.36-104.47 28.962-104.182-28.922L.445 70.766h255.11z" fill="#E44D26"></path>
-<path d="M128 337.95l84.417-23.403 19.86-222.49H128V337.95z" fill="#F16529"></path>
-<path d="M82.82 155.932H128v-31.937H47.917l.764 8.568 7.85 88.01H128v-31.937H85.739l-2.919-32.704zM90.018 236.542h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58l-.14.037-35.568-9.604-2.274-25.471z" fill="#EBEBEB"></path>
-<path d="M24.18 0h16.23v16.035h14.847V0h16.231v48.558H55.257v-16.26H40.41v16.26h-16.23V0zM92.83 16.103H78.544V0h44.814v16.103h-14.295v32.455h-16.23V16.103h-.001zM130.47 0h16.923l10.41 17.062L168.203 0h16.93v48.558h-16.164V24.49l-11.166 17.265h-.28L146.35 24.49v24.068H130.47V0zM193.21 0h16.235v32.508h22.824v16.05h-39.06V0z" fill="#000"></path>
-<path d="M127.89 220.573h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576H127.89v31.937zM127.89 155.854v.078h77.143l.64-7.178 1.456-16.191.763-8.568H127.89v31.86z" fill="#FFF"></path>
-</svg>
-<img alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="width: 48px; height: 48px;"/>
-<span>HTML</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="95"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="css">
-<svg class="skill-logo" viewbox="0 0 256 361" xmlns="http://www.w3.org/2000/svg">
-<path d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z" fill="#264DE4"></path>
-<path d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z" fill="#2965F1"></path>
-<path d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z" fill="#EBEBEB"></path>
-<path d="M60.484 0h16.176v16.176h14.789V0h16.176v48.694H91.449V32.352H76.66v16.342H60.484V0zM106.901 0h16.176v13.823h16.176V0h16.176v48.694h-16.176V29.647h-16.176v19.047h-16.176V0zM153.319 0h16.176v32.352h22.588v16.342h-38.764V0z" fill="#000"></path>
-<path d="M202.127 188.636l5.765-31.937H128v31.937h74.127zM127.89 271.58v33.226l65.473-18.145.48-5.396.731-8.177-.731 8.177-.48 5.396L127.89 304.806v-33.226z" fill="#FFF"></path>
-</svg>
-<img alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" style="width: 48px; height: 48px;"/>
-<span>CSS</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="90"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="skills-category tools-technologies" data-aos="fade-up" data-delay="200">
-<h3>Tools &amp; Technologies</h3>
-<div class="skills-grid">
-<div class="skill-item" data-skill="github">
-<svg class="skill-logo" viewbox="0 0 256 250" xmlns="http://www.w3.org/2000/svg">
-<path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.18-23.84-35.614 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691.001 128.001.001Z" fill="#24292F"></path>
-</svg>
-<img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 48px; height: 48px;"/>
-<span>GitHub</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="95"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="vscode">
-<svg class="skill-logo" viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-<mask id="a">
-<path d="M181.534 254.252a15.934 15.934 0 0 0 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#fff"></path>
-</mask>
-<path d="M181.534 254.252a15.934 15.934 0 0 0 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#0065A9"></path>
-<g mask="url(#a)">
-<path d="M246.135 26.873L193.593 3.188c-1.714-.772-3.61-.9-5.4-.364a15.89 15.89 0 0 0-4.225 2.015l-59.392 49.16c-.476.394-1.144.394-1.62 0L63.815 4.413a15.89 15.89 0 0 0-18.234.364L3.666 26.873C-4.139 31.064-4.139 42.936 3.666 47.127L45.581 71.999c.476.394.476 1.212 0 1.606L3.666 98.477c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c.476.394.476 1.212 0 1.606L3.666 169.681c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c.476.394.476 1.212 0 1.606L3.666 240.785c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c5.334 3.162 12.09 1.606 15.252-3.728a10.634 10.634 0 0 0 1.42-5.334V39.353c0-6.064 3.438-11.587 8.727-14.326z" fill="#007ACC"></path>
-<path d="m181.534 254.252 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#1F9CF0"></path>
-</g>
-<path d="M194.194 2.241c-2.87-1.295-6.196-1.295-9.066 0a15.939 15.939 0 0 0-7.393 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74c2.87 1.295 6.196 1.295 9.066 0l52.539-23.791a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.194 2.241z" fill="#0078D4"></path>
-</svg>
-<img alt="VS Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="width: 48px; height: 48px;"/>
-<span>VS Code</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="90"></div>
-</div>
-</div>
-<div class="skill-item" data-skill="powerbi">
-<svg class="skill-logo" viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#F2C811" height="256" rx="15" width="256"></rect>
-<rect fill="#fff" height="144" rx="4" width="32" x="32" y="80"></rect>
-<rect fill="#fff" height="176" rx="4" width="32" x="80" y="48"></rect>
-<rect fill="#fff" height="128" rx="4" width="32" x="128" y="96"></rect>
-<rect fill="#fff" height="192" rx="4" width="32" x="176" y="32"></rect>
-<text fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="128" y="240">Power BI</text>
-</svg>
-<img alt="Power BI" src="https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png" style="width: 48px; height: 48px;"/>
-<span>Power BI</span>
-<div class="skill-progress">
-<div class="skill-progress-bar" data-progress="80"></div>
-</div>
-<!-- Call-to-Action Section -->
-<section class="cta" id="cta">
-<div class="container">
-<div class="cta-content" data-aos="fade-up">
-<div class="cta-header">
-<h2 class="cta-title">Let's Work Together</h2>
-<p class="cta-subtitle">Looking to bring your next project to life? I'm here to help you achieve your goals with innovative tech solutions and creative problem-solving.</p>
-</div>
-<div class="cta-buttons">
-<a class="btn btn-primary cta-btn" data-aos="fade-up" data-delay="200" download="Bhavesh_Chaudhary_IT_Resume.pdf" href="/Bhavesh_Chaudhary_IT_Resume.pdf" target="_blank">
-<span class="btn-text">
-<i class="fas fa-download"></i>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span class="btn-text">View My Work</span>
+                            <div class="btn-bg"></div>
+                            <div class="btn-particles"></div>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span class="btn-text">Get In Touch</span>
+                            <div class="btn-bg"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <div class="frame-corners">
+                                <div class="corner corner-tl"></div>
+                                <div class="corner corner-tr"></div>
+                                <div class="corner corner-bl"></div>
+                                <div class="corner corner-br"></div>
+                            </div>
+                            <div class="profile-image">
+                                <img src="public/WhatsApp Image 2025-07-01 at 10.39.10_a93cf03e.jpg" alt="Bhavesh Chaudhary" class="profile-photo">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="scan-lines"></div>
+                        </div>
+                        <div class="profile-data">
+                            <div class="data-stream">
+                                <div class="data-line"></div>
+                                <div class="data-line"></div>
+                                <div class="data-line"></div>
+                            </div>
+                            <div class="profile-info">
+                                <div class="info-item">
+                                    <span class="info-label">Status:</span>
+                                    <span class="info-value">Available</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Location:</span>
+                                    <span class="info-value">Australia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow"></div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Discover my journey in technology and cybersecurity</p>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="about-card" data-aos="fade-up" data-delay="0">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>Completed Professional Year in ICT and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-delay="400">
+                        <div class="card-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h3>Mission</h3>
+                        <p>Driven by curiosity to solve complex problems through data analysis and ethical hacking, becoming an expert in cybersecurity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider reverse">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">My journey in the tech industry</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="slide-right">
+                    <div class="timeline-date">July 2024 - October 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="timeline-info">
+                            <h3>Data Analyst Intern</h3>
+                            <h4>Advance Consultant Services By ACS</h4>
+                            <p>Worked on data analysis projects, developing analytical solutions, and contributing to data-driven decision making processes. Gained hands-on experience with real-world datasets and business intelligence tools.</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Data Analysis</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="slide-left">
+                    <div class="timeline-date">2024 - October 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-info">
+                            <h3>Professional Year in ICT</h3>
+                            <h4>Completed - October 2024</h4>
+                            <p>Successfully completed Professional Year program enhancing technical skills and gaining practical experience in Information and Communication Technology.</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">ICT</span>
+                                <span class="skill-tag">Professional Development</span>
+                                <span class="skill-tag">Industry Knowledge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work and achievements</p>
+            </div>
+            
+            <!-- Project Filters -->
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+                <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn" data-filter="college">College Projects</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in" data-category="data-science">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="project-type">Data Science</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Customer Churn Prediction</h3>
+                        <p>Developed a machine learning model to predict customer churn for business decision-making during my internship. Handled complex data processing and optimized model accuracy through feature engineering.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <img src="public/confusion_matrix.png" alt="Confusion Matrix" class="result-image">
+                                <span>Confusion Matrix</span>
+                            </div>
+                            <div class="result-item">
+                                <img src="public/roc_curve.png" alt="ROC Curve" class="result-image">
+                                <span>ROC Curve (AUC = 0.83)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Maniramluitel2056/Customer-Churn-Analysis" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="#" class="project-link internship-badge">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Internship Project</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="200" data-category="college">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span class="project-type">College Project</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Buy and Sell System</h3>
+                        <p>Led a team to develop a comprehensive online platform enabling users to buy and sell various products. Managed team coordination, deadlines, and technical tasks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Business Systems</span>
+                            <span class="tech-tag">Databases</span>
+                            <span class="tech-tag">Team Management</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/iambhavesh55/Capestone_project" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="400" data-category="web-dev">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="project-type">Web Development</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Finance Dashboard</h3>
+                        <p>Full-stack web application for personal finance management with expense tracking, budget planning, and financial analytics. Features responsive design and real-time data visualization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link coming-soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </a>
+                        <a href="#" class="project-link in-development">
+                            <i class="fas fa-code"></i>
+                            <span>In Development</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-delay="600" data-category="cybersecurity">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="project-type">Cybersecurity</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Security Analysis</h3>
+                        <p>Comprehensive security assessment and penetration testing project. Identified vulnerabilities and provided security recommendations for network infrastructure.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Ethical Hacking</span>
+                            <span class="tech-tag">Network Analysis</span>
+                            <span class="tech-tag">Security Testing</span>
+                            <span class="tech-tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link coming-soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </a>
+                        <a href="#" class="project-link in-development">
+                            <i class="fas fa-code"></i>
+                            <span>In Development</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider reverse">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-particles"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category programming-languages" data-aos="fade-up">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="python">
+                            <svg class="skill-logo" viewBox="0 0 256 255" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient x1="12.959%" y1="12.039%" x2="79.639%" y2="78.201%" id="a">
+                                        <stop stop-color="#387EB8" offset="0%"/>
+                                        <stop stop-color="#366994" offset="100%"/>
+                                    </linearGradient>
+                                    <linearGradient x1="19.128%" y1="20.579%" x2="90.742%" y2="88.429%" id="b">
+                                        <stop stop-color="#FFE052" offset="0%"/>
+                                        <stop stop-color="#FFC331" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z" fill="url(#a)"/>
+                                <path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z" fill="url(#b)"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width: 48px; height: 48px;">
+                            <span>Python</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="java">
+                            <svg class="skill-logo" viewBox="0 0 256 346" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034 0 0 7.93 4.972 19.003 9.279-67.611 28.977-153.019-1.679-99.913-16.517" fill="#5382A1"/>
+                                <path d="M74.292 230.846s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43 0 0 5.526 5.602 14.215 8.666-81.747 23.904-172.798 1.885-114.296-17.532" fill="#5382A1"/>
+                                <path d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858 0 0-118.238 29.53-61.765 94.6" fill="#E76F00"/>
+                                <path d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471-12.323-5.36 10.787-12.8 18.056-14.362 7.581-1.644 11.914-1.337 11.914-1.337-13.705-9.655-88.583 18.957-38.034 27.15 137.853 22.356 251.292-10.066 215.535-26.195" fill="#5382A1"/>
+                                <path d="M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.030-.89 25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183 29.981-14.492 54.358-12.848 54.358-12.848" fill="#5382A1"/>
+                                <path d="M201.506 253.422c64.8-33.672 34.839-66.03 13.927-61.67-5.126 1.07-7.411 1.998-7.411 1.998s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647 0 .001 1.003-.895 1.302-1.705" fill="#5382A1"/>
+                                <path d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37" fill="#E76F00"/>
+                                <path d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64 0 0-4.348 11.158-51.404 20.018-53.088 9.99-118.564 8.824-157.399 2.421.001 0 7.95 6.58 48.829 9.201" fill="#5382A1"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" style="width: 48px; height: 48px;">
+                            <span>Java</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="sql">
+                            <svg class="skill-logo" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="256" height="256" fill="#00758F" rx="15"/>
+                                <path d="M128 32c-53.02 0-96 21.49-96 48v96c0 26.51 42.98 48 96 48s96-21.49 96-48V80c0-26.51-42.98-48-96-48z" fill="#fff"/>
+                                <ellipse cx="128" cy="80" rx="96" ry="48" fill="#00758F"/>
+                                <path d="M32 80v96c0 26.51 42.98 48 96 48s96-21.49 96-48V80" fill="none" stroke="#fff" stroke-width="8"/>
+                                <path d="M32 128v48c0 26.51 42.98 48 96 48s96-21.49 96-48v-48" fill="none" stroke="#fff" stroke-width="8"/>
+                                <text x="128" y="140" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">SQL</text>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" style="width: 48px; height: 48px;">
+                            <span>SQL</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="html">
+                            <svg class="skill-logo" viewBox="0 0 256 361" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M255.555 70.766l-23.241 260.36-104.47 28.962-104.182-28.922L.445 70.766h255.11z" fill="#E44D26"/>
+                                <path d="M128 337.95l84.417-23.403 19.86-222.49H128V337.95z" fill="#F16529"/>
+                                <path d="M82.82 155.932H128v-31.937H47.917l.764 8.568 7.85 88.01H128v-31.937H85.739l-2.919-32.704zM90.018 236.542h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58l-.14.037-35.568-9.604-2.274-25.471z" fill="#EBEBEB"/>
+                                <path d="M24.18 0h16.23v16.035h14.847V0h16.231v48.558H55.257v-16.26H40.41v16.26h-16.23V0zM92.83 16.103H78.544V0h44.814v16.103h-14.295v32.455h-16.23V16.103h-.001zM130.47 0h16.923l10.41 17.062L168.203 0h16.93v48.558h-16.164V24.49l-11.166 17.265h-.28L146.35 24.49v24.068H130.47V0zM193.21 0h16.235v32.508h22.824v16.05h-39.06V0z" fill="#000"/>
+                                <path d="M127.89 220.573h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576H127.89v31.937zM127.89 155.854v.078h77.143l.64-7.178 1.456-16.191.763-8.568H127.89v31.86z" fill="#FFF"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" style="width: 48px; height: 48px;">
+                            <span>HTML</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="css">
+                            <svg class="skill-logo" viewBox="0 0 256 361" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z" fill="#264DE4"/>
+                                <path d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z" fill="#2965F1"/>
+                                <path d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z" fill="#EBEBEB"/>
+                                <path d="M60.484 0h16.176v16.176h14.789V0h16.176v48.694H91.449V32.352H76.66v16.342H60.484V0zM106.901 0h16.176v13.823h16.176V0h16.176v48.694h-16.176V29.647h-16.176v19.047h-16.176V0zM153.319 0h16.176v32.352h22.588v16.342h-38.764V0z" fill="#000"/>
+                                <path d="M202.127 188.636l5.765-31.937H128v31.937h74.127zM127.89 271.58v33.226l65.473-18.145.48-5.396.731-8.177-.731 8.177-.48 5.396L127.89 304.806v-33.226z" fill="#FFF"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" style="width: 48px; height: 48px;">
+                            <span>CSS</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category tools-technologies" data-aos="fade-up" data-delay="200">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="github">
+                            <svg class="skill-logo" viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.18-23.84-35.614 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691.001 128.001.001Z" fill="#24292F"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 48px; height: 48px;">
+                            <span>GitHub</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="vscode">
+                            <svg class="skill-logo" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="a">
+                                    <path d="M181.534 254.252a15.934 15.934 0 0 0 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#fff"/>
+                                </mask>
+                                <path d="M181.534 254.252a15.934 15.934 0 0 0 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#0065A9"/>
+                                <g mask="url(#a)">
+                                    <path d="M246.135 26.873L193.593 3.188c-1.714-.772-3.61-.9-5.4-.364a15.89 15.89 0 0 0-4.225 2.015l-59.392 49.16c-.476.394-1.144.394-1.62 0L63.815 4.413a15.89 15.89 0 0 0-18.234.364L3.666 26.873C-4.139 31.064-4.139 42.936 3.666 47.127L45.581 71.999c.476.394.476 1.212 0 1.606L3.666 98.477c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c.476.394.476 1.212 0 1.606L3.666 169.681c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c.476.394.476 1.212 0 1.606L3.666 240.785c-7.805 4.191-7.805 16.063 0 20.254l41.915 24.872c5.334 3.162 12.09 1.606 15.252-3.728a10.634 10.634 0 0 0 1.42-5.334V39.353c0-6.064 3.438-11.587 8.727-14.326z" fill="#007ACC"/>
+                                    <path d="m181.534 254.252 12.7-.488L247.273 230.973a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.234 2.236a15.939 15.939 0 0 0-16.459 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74z" fill="#1F9CF0"/>
+                                </g>
+                                <path d="M194.194 2.241c-2.87-1.295-6.196-1.295-9.066 0a15.939 15.939 0 0 0-7.393 2.252L74.137 92.736 31.095 63.305a10.655 10.655 0 0 0-13.442 1.42L3.32 77.94a10.634 10.634 0 0 0 0 15.133l35.643 34.927L3.32 162.927a10.634 10.634 0 0 0 0 15.133l14.333 13.215a10.655 10.655 0 0 0 13.442 1.42L74.137 163.264l103.638 88.248a15.993 15.993 0 0 0 3.759 2.74c2.87 1.295 6.196 1.295 9.066 0l52.539-23.791a16.002 16.002 0 0 0 8.727-14.326V39.353c0-6.064-3.438-11.587-8.727-14.326L194.194 2.241z" fill="#0078D4"/>
+                            </svg>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" style="width: 48px; height: 48px;">
+                            <span>VS Code</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="powerbi">
+                            <svg class="skill-logo" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="256" height="256" fill="#F2C811" rx="15"/>
+                                <rect x="32" y="80" width="32" height="144" fill="#fff" rx="4"/>
+                                <rect x="80" y="48" width="32" height="176" fill="#fff" rx="4"/>
+                                <rect x="128" y="96" width="32" height="128" fill="#fff" rx="4"/>
+                                <rect x="176" y="32" width="32" height="192" fill="#fff" rx="4"/>
+                                <text x="128" y="240" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Power BI</text>
+                            </svg>
+                            <img src="https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png" alt="Power BI" style="width: 48px; height: 48px;">
+                            <span>Power BI</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-progress="80"></div>
+                            </div>
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <div class="cta-header">
+                    <h2 class="cta-title">Let's Work Together</h2>
+                    <p class="cta-subtitle">Looking to bring your next project to life? I'm here to help you achieve your goals with innovative tech solutions and creative problem-solving.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="/Bhavesh_Chaudhary_IT_Resume.pdf" target="_blank" class="btn btn-primary cta-btn" data-aos="fade-up" data-delay="200" download="Bhavesh_Chaudhary_IT_Resume.pdf">
+                        <span class="btn-text">
+                            <i class="fas fa-download"></i>
                             Download Resume
                         </span>
-<div class="btn-bg"></div>
-<div class="btn-particles"></div>
-</a>
-<a class="btn btn-secondary cta-btn" data-aos="fade-up" data-delay="400" href="#contact">
-<span class="btn-text">
-<i class="fas fa-rocket"></i>
+                        <div class="btn-bg"></div>
+                        <div class="btn-particles"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary cta-btn" data-aos="fade-up" data-delay="400">
+                        <span class="btn-text">
+                            <i class="fas fa-rocket"></i>
                             Hire Me
                         </span>
-<div class="btn-bg"></div>
-<div class="btn-particles"></div>
-</a>
-</div>
-<div class="cta-stats" data-aos="fade-up" data-delay="600">
-<div class="cta-stat">
-<span class="stat-number">0</span>
-<span class="stat-label">Available</span>
-</div>
-<div class="cta-stat">
-<span class="stat-number">0</span>
-<span class="stat-label">Response Time</span>
-</div>
-<div class="cta-stat">
-<span class="stat-number">0</span>
-<span class="stat-label">Commitment</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Section Divider -->
-<div class="section-divider">
-<svg preserveaspectratio="none" viewbox="0 0 1200 120">
-<path class="shape-fill" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
-<path class="shape-fill" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
-<path class="shape-fill" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-</svg>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="contact" id="contact">
-<div class="container">
-<div class="section-header">
-<h2 class="section-title">Let's Connect</h2>
-<p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
-</div>
-<div class="contact-content">
-<div class="contact-info">
-<div class="contact-item" data-aos="fade-right">
-<div class="contact-icon">
-<i class="fas fa-envelope"></i>
-</div>
-<div class="contact-details">
-<h4>Email</h4>
-<a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
-</div>
-</div>
-<div class="contact-item" data-aos="fade-right" data-delay="200">
-<div class="contact-icon">
-<i class="fas fa-phone"></i>
-</div>
-<div class="contact-details">
-<h4>Phone</h4>
-<span>+61 468 538 615</span>
-</div>
-</div>
-<div class="contact-item" data-aos="fade-left">
-<div class="contact-icon">
-<i class="fab fa-linkedin"></i>
-</div>
-<div class="contact-details">
-<h4>LinkedIn</h4>
-<a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
-</div>
-</div>
-<div class="contact-item" data-aos="fade-left" data-delay="200">
-<div class="contact-icon">
-<i class="fab fa-github"></i>
-</div>
-<div class="contact-details">
-<h4>GitHub</h4>
-<a href="https://github.com/iambhavesh55" target="_blank">View repositories</a>
-</div>
-</div>
-</div>
-<div class="contact-form-container" data-aos="fade-up">
-<form class="contact-form" data-netlify="true" id="contactForm" method="POST" name="contact" netlify-honeypot="bot-field">
-<!-- Hidden field for spam protection -->
-<input name="form-name" type="hidden" value="contact"/>
-<div style="display: none;">
-<label>Don't fill this out if you're human: <input name="bot-field"/></label>
-</div>
-<div class="form-group">
-<input id="name" name="name" required="" type="text"/>
-<label for="name">Your Name</label>
-</div>
-<div class="form-group">
-<input id="email" name="email" required="" type="email"/>
-<label for="email">Your Email</label>
-</div>
-<div class="form-group">
-<textarea id="message" name="message" required="" rows="5"></textarea>
-<label for="message">Your Message</label>
-</div>
-<!-- Success/Error Messages -->
-<div class="form-messages" id="form-messages" style="display: none;"></div>
-<button class="btn btn-primary" type="submit">
-<span class="btn-text">Send Message</span>
-<div class="btn-bg"></div>
-<div class="btn-particles"></div>
-</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-content">
-<div class="footer-left">
-<div class="footer-bio">
-<h4>Bhavesh Chaudhary</h4>
-<p class="bio-text">"Turning data into insights, securing digital futures."</p>
-<p class="bio-description">Passionate cybersecurity specialist and data analyst dedicated to solving complex problems through innovative technology solutions.</p>
-</div>
-<div class="certifications">
-<h5>Future Certifications</h5>
-<div class="cert-badges">
-<div class="cert-badge coming-soon">
-<i class="fas fa-user-secret"></i>
-<span>CEH</span>
-</div>
-<div class="cert-badge coming-soon">
-<i class="fas fa-shield-alt"></i>
-<span>CISSP</span>
-</div>
-<div class="cert-badge coming-soon">
-<i class="fas fa-lock"></i>
-<span>Security+</span>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-right">
-<p>© 2024 Bhavesh Chaudhary. All rights reserved.</p>
-<div class="social-links">
-<a class="social-link" href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-<a class="social-link" href="https://github.com/iambhavesh55" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<!-- Back to Top -->
-<div class="back-to-top" id="backToTop">
-<i class="fas fa-chevron-up"></i>
-</div>
-<!-- Tooltip -->
-<div class="tooltip" id="tooltip"></div>
-<script src="/src/main.js" type="module"></script>
-</div></div></div></div></div></section></body>
+                        <div class="btn-bg"></div>
+                        <div class="btn-particles"></div>
+                    </a>
+                </div>
+                <div class="cta-stats" data-aos="fade-up" data-delay="600">
+                    <div class="cta-stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Commitment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-right" data-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <span>+61 468 538 615</span>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-left">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-left" data-delay="200">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/iambhavesh55" target="_blank">View repositories</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-up">
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Hidden field for spam protection -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="form-messages" class="form-messages" style="display: none;"></div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-bg"></div>
+                            <div class="btn-particles"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-bio">
+                        <h4>Bhavesh Chaudhary</h4>
+                        <p class="bio-text">"Turning data into insights, securing digital futures."</p>
+                        <p class="bio-description">Passionate cybersecurity specialist and data analyst dedicated to solving complex problems through innovative technology solutions.</p>
+                    </div>
+                    <div class="certifications">
+                        <h5>Future Certifications</h5>
+                        <div class="cert-badges">
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-user-secret"></i>
+                                <span>CEH</span>
+                            </div>
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>CISSP</span>
+                            </div>
+                            <div class="cert-badge coming-soon">
+                                <i class="fas fa-lock"></i>
+                                <span>Security+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2024 Bhavesh Chaudhary. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/iambhavesh55" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
 </html>
