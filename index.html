@@ -591,78 +591,125 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's collaborate and create something extraordinary together</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item" data-aos="fade-right">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item" data-aos="fade-right" data-delay="200">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <span>+61 468 538 615</span>
-                        </div>
-                    </div>
-                    <div class="contact-item" data-aos="fade-left">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
-                        </div>
-                    </div>
-                    <div class="contact-item" data-aos="fade-left" data-delay="200">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/iambhavesh55" target="_blank">View repositories</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-container" data-aos="fade-up">
-                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <!-- Hidden field for spam protection -->
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-header">
+                            <h3>Let's start a conversation</h3>
+                            <p>I'm always excited to discuss new opportunities, innovative projects, and potential collaborations.</p>
                         </div>
                         
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Your Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Your Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message">Your Message</label>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
+                                    <span class="method-note">Best for detailed discussions</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <span>+61 468 538 615</span>
+                                    <span class="method-note">Available during business hours</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
+                                    <span class="method-note">Professional networking</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/iambhavesh55" target="_blank">View repositories</a>
+                                    <span class="method-note">Check out my code</span>
+                                </div>
+                            </div>
                         </div>
                         
-                        <!-- Success/Error Messages -->
-                        <div id="form-messages" class="form-messages" style="display: none;"></div>
+                        <div class="availability-status">
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>Available for new opportunities</span>
+                            </div>
+                            <div class="response-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Usually responds within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-section" data-aos="fade-left">
+                        <div class="form-header">
+                            <h3>Send me a message</h3>
+                            <p>Tell me about your project or just say hello!</p>
+                        </div>
                         
-                        <button type="submit" class="btn btn-primary">
-                            <span class="btn-text">Send Message</span>
-                            <div class="btn-bg"></div>
-                            <div class="btn-particles"></div>
-                        </button>
-                    </form>
+                        <form class="modern-contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <!-- Hidden field for spam protection -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            <div style="display: none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <input type="text" id="name" name="name" required>
+                                    <label for="name">Full Name</label>
+                                    <div class="field-border"></div>
+                                </div>
+                                <div class="form-field">
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="email">Email Address</label>
+                                    <div class="field-border"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <input type="text" id="subject" name="subject" required>
+                                <label for="subject">Subject</label>
+                                <div class="field-border"></div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="field-border"></div>
+                            </div>
+                            
+                            <!-- Success/Error Messages -->
+                            <div id="form-messages" class="form-messages" style="display: none;"></div>
+                            
+                            <button type="submit" class="modern-submit-btn">
+                                <span class="btn-content">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span class="btn-text">Send Message</span>
+                                </span>
+                                <div class="btn-ripple"></div>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
