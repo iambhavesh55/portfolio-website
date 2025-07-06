@@ -414,6 +414,71 @@ function startAnimations() {
 // Enhanced animated counters
 function initializeCounters() {
     console.log('Initializing enhanced counters...');
+    
+    // Initialize CTA counter animation
+    initializeCTACounters();
+}
+
+function initializeCTACounters() {
+    const ctaSection = document.getElementById('cta');
+    if (!ctaSection) return;
+    
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCTACounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    observer.observe(ctaSection);
+}
+
+function animateCTACounters() {
+    const counters = [
+        { element: document.querySelector('.cta-stat:nth-child(1) .stat-number'), target: 24, suffix: '/7' },
+        { element: document.querySelector('.cta-stat:nth-child(2) .stat-number'), target: 48, suffix: 'h' },
+        { element: document.querySelector('.cta-stat:nth-child(3) .stat-number'), target: 100, suffix: '%' }
+    ];
+    
+    counters.forEach((counter, index) => {
+        if (!counter.element) return;
+        
+        const duration = 1500 + (index * 200);
+        const start = performance.now();
+        
+        function updateCounter(currentTime) {
+            const elapsed = currentTime - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(counter.target * easeOutQuart);
+            
+            counter.element.textContent = current + (progress === 1 ? counter.suffix : '');
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                // Add completion animation
+                counter.element.style.transform = 'scale(1.2)';
+                counter.element.style.textShadow = '0 0 20px rgba(0, 245, 255, 0.8)';
+                setTimeout(() => {
+                    counter.element.style.transform = 'scale(1)';
+                    counter.element.style.textShadow = '0 0 10px rgba(0, 245, 255, 0.5)';
+                }, 300);
+            }
+        }
+        
+        // Delay each counter
+        setTimeout(() => {
+            requestAnimationFrame(updateCounter);
+        }, index * 300);
+    });
 }
 
 function animateCounters() {
