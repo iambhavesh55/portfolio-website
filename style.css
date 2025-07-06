@@ -1932,6 +1932,23 @@ section {
     .cert-badges {
         justify-content: center;
     }
+    
+    .cta-btn {
+        min-width: 180px;
+        padding: var(--space-md) var(--space-lg);
+        font-size: 1rem;
+    }
+    
+    .cta-stats {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: center;
+    }
+    
+    .cta-stat {
+        min-width: 100px;
+        padding: var(--space-md);
+    }
 }
 
 /* Utility Classes */
