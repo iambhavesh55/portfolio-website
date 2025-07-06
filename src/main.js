@@ -415,9 +415,6 @@ function animateSkillsSection() {
             }, index * 100);
         });
         
-        // Create floating particles
-        createSkillsParticles();
-        
         // Add staggered animation to skill items
         const skillItems = document.querySelectorAll('.skill-item');
         skillItems.forEach((item, index) => {
