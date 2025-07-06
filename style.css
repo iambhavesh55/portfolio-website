@@ -1504,6 +1504,19 @@ section {
 .skill-item i {
     font-size: 2rem;
     margin-bottom: var(--space-sm);
+
+.skill-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0.8);
+    transition: all var(--transition-base);
+}
+
+.skill-item:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+    transform: scale(1.1);
+}
 }
 
 .skill-item span {
