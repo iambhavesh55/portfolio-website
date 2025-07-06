@@ -1332,6 +1332,45 @@ section {
     transform: translateY(-2px);
 }
 
+.project-link.internship-badge {
+    background: var(--bg-card);
+    border-color: var(--success);
+    color: var(--success);
+    cursor: default;
+}
+
+.project-link.internship-badge:hover {
+    background: var(--success);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.project-link.coming-soon {
+    background: var(--bg-card);
+    border-color: var(--warning);
+    color: var(--warning);
+    cursor: help;
+}
+
+.project-link.coming-soon:hover {
+    background: var(--warning);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.project-link.in-development {
+    background: var(--bg-card);
+    border-color: var(--accent);
+    color: var(--accent);
+    cursor: help;
+}
+
+.project-link.in-development:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
 /* Skills Section */
 .skills {
     background: var(--bg-primary);
