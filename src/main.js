@@ -406,15 +406,6 @@ function initializeAnimations() {
 // Enhanced Skills Section Animations
 function animateSkillsSection() {
     try {
-        // Animate progress bars
-        const progressBars = document.querySelectorAll('.skill-progress-bar');
-        progressBars.forEach((bar, index) => {
-            const progress = bar.getAttribute('data-progress');
-            setTimeout(() => {
-                bar.style.width = progress + '%';
-            }, index * 100);
-        });
-        
         // Add staggered animation to skill items
         const skillItems = document.querySelectorAll('.skill-item');
         skillItems.forEach((item, index) => {
