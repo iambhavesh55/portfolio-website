@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typed.js for Typing Effect -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -70,6 +75,24 @@
                 </a>
             </div>
             <div class="nav-actions">
+                <!-- Multi-Theme Toggle -->
+                <div class="theme-selector" id="themeSelector">
+                    <button class="theme-btn active" data-theme="dark" title="Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="dimmed" title="Dimmed Mode">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="neon" title="Neon Mode">
+                        <i class="fas fa-bolt"></i>
+                    </button>
+                </div>
+                
+                <!-- Sound Toggle -->
+                <button class="sound-toggle" id="soundToggle" title="Toggle Sound Effects">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
@@ -97,7 +120,7 @@
                         <span class="title-line">Chaudhary</span>
                     </h1>
                     <div class="hero-subtitle">
-                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-text" id="typedText"></span>
                     </div>
                     <p class="hero-description">
                         Passionate about ethical hacking, data analytics, and cybersecurity. 
@@ -181,29 +204,29 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Discover my journey in technology and cybersecurity</p>
             </div>
             <div class="about-content">
                 <div class="about-cards">
-                    <div class="about-card" data-aos="fade-up" data-delay="0">
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3>Education</h3>
                         <p>Business Information Systems graduate from Asia Pacific International College with a strong foundation in ICT and growing passion for cybersecurity.</p>
                     </div>
-                    <div class="about-card" data-aos="fade-up" data-delay="200">
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="card-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
                         <h3>Experience</h3>
                         <p>Completed Professional Year in ICT and gained hands-on experience as a Data Analyst Intern at Advance Consultant Services By ACS.</p>
                     </div>
-                    <div class="about-card" data-aos="fade-up" data-delay="400">
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="600">
                         <div class="card-icon">
                             <i class="fas fa-target"></i>
                         </div>
@@ -222,14 +245,14 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="experience" data-aos="fade-up">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">Professional Experience</h2>
                 <p class="section-subtitle">My journey in the tech industry</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item" data-aos="slide-right">
+                <div class="timeline-item" data-aos="slide-right" data-aos-delay="200">
                     <div class="timeline-date">July 2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
@@ -248,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="slide-left">
+                <div class="timeline-item" data-aos="slide-left" data-aos-delay="400">
                     <div class="timeline-date">2024 - October 2024</div>
                     <div class="timeline-content">
                         <div class="timeline-icon">
@@ -277,15 +300,15 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">A showcase of my recent work and achievements</p>
             </div>
             
             <!-- Project Filters -->
-            <div class="project-filters" data-aos="fade-up">
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="200">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="data-science">Data Science</button>
                 <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
@@ -294,7 +317,7 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-aos="zoom-in" data-category="data-science">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-category="data-science">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-chart-line"></i>
@@ -333,7 +356,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-delay="200" data-category="college">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400" data-category="college">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -357,7 +380,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-delay="400" data-category="web-dev">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500" data-category="web-dev">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-globe"></i>
@@ -383,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="zoom-in" data-delay="600" data-category="cybersecurity">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="600" data-category="cybersecurity">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-shield-alt"></i>
@@ -418,73 +441,109 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" data-aos="fade-up">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">Technical Skills</h2>
                 <p class="section-subtitle">Technologies and tools I work with</p>
             </div>
             <div class="skills-container">
-                <div class="skills-category" data-aos="fade-up">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>Programming Languages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
+                    <div class="skills-grid" id="programmingSkills">
+                        <div class="skill-item" data-skill="90">
                             <i class="fab fa-python"></i>
                             <span>Python</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="90"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="75">
                             <i class="fab fa-java"></i>
                             <span>Java</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="75"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="85">
                             <i class="fas fa-database"></i>
                             <span>SQL</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="85"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="80">
                             <i class="fab fa-html5"></i>
                             <span>HTML</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="80"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="75">
                             <i class="fab fa-css3-alt"></i>
                             <span>CSS</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="75"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skills-category" data-aos="fade-up" data-delay="200">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
                     <h3>Tools & Technologies</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
+                    <div class="skills-grid" id="toolsSkills">
+                        <div class="skill-item" data-skill="85">
                             <i class="fab fa-github"></i>
                             <span>GitHub</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="85"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="90">
                             <i class="fas fa-code"></i>
                             <span>VS Code</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="90"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="80">
                             <i class="fas fa-chart-bar"></i>
                             <span>Power BI</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="80"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="70">
                             <i class="fas fa-chart-line"></i>
                             <span>Tableau</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="70"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skills-category" data-aos="fade-up" data-delay="400">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="600">
                     <h3>Cybersecurity</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
+                    <div class="skills-grid" id="securitySkills">
+                        <div class="skill-item" data-skill="75">
                             <i class="fas fa-shield-alt"></i>
                             <span>Ethical Hacking</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="75"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="80">
                             <i class="fas fa-network-wired"></i>
                             <span>Networking</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="80"></div>
+                            </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-skill="70">
                             <i class="fas fa-bug"></i>
                             <span>Security Testing</span>
+                            <div class="skill-progress">
+                                <div class="skill-bar" data-width="70"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -499,15 +558,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-aos="fade-up">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to discuss opportunities and build something amazing together</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item" data-aos="fade-right">
+                    <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -516,7 +575,7 @@
                             <a href="mailto:iambhavesh55@gmail.com">iambhavesh55@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-right" data-delay="200">
+                    <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -525,7 +584,7 @@
                             <span>+61 468 538 615</span>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-left">
+                    <div class="contact-item" data-aos="fade-left" data-aos-delay="400">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
@@ -534,7 +593,7 @@
                             <a href="https://www.linkedin.com/in/bhavesh-chaudhary-3a055a28a/" target="_blank">Connect with me</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-left" data-delay="200">
+                    <div class="contact-item" data-aos="fade-left" data-aos-delay="500">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -544,7 +603,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container" data-aos="fade-up">
+                <div class="contact-form-container" data-aos="fade-up" data-aos-delay="300">
                     <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <!-- Hidden field for spam protection -->
                         <input type="hidden" name="form-name" value="contact" />
@@ -632,6 +691,34 @@
 
     <!-- Tooltip -->
     <div class="tooltip" id="tooltip"></div>
+
+    <!-- Terminal Easter Egg -->
+    <div class="terminal-overlay" id="terminalOverlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminalClose"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Bhavesh@portfolio:~$</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">bhavesh@portfolio:~$</span>
+                    <span class="terminal-cursor">_</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="hoverSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+    <audio id="clickSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
 
     <script type="module" src="/src/main.js"></script>
 </body>
