@@ -1,0 +1,111 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+# Enable editorial workflow for draft/review/publish
+publish_mode: editorial_workflow
+
+# Site configuration
+site_url: https://bhaveshchaudhary.com
+display_url: https://bhaveshchaudhary.com
+logo_url: https://bhaveshchaudhary.com/favicon.ico
+
+collections:
+  # Blog Posts Collection
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", required: true, hint: "Brief description for SEO and previews" }
+      - { label: "Date", name: "date", widget: "datetime", required: true }
+      - { label: "Author", name: "author", widget: "string", default: "Bhavesh Chaudhary" }
+      - { label: "Category", name: "category", widget: "select", options: ["Cybersecurity", "Data Analytics", "Web Development", "Technology", "Career"], required: true }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, required: false }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show on homepage" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
+
+  # Projects Collection
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Category", name: "category", widget: "select", options: ["data-science", "cybersecurity", "web-dev", "college"], required: true }
+      - { label: "Technologies", name: "technologies", widget: "list", allow_add: true, required: true }
+      - { label: "GitHub URL", name: "github_url", widget: "string", required: false }
+      - { label: "Live Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "Status", name: "status", widget: "select", options: ["completed", "in-development", "coming-soon"], default: "completed" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Order", name: "order", widget: "number", default: 0, hint: "Display order (lower numbers first)" }
+      - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+      - { label: "Content", name: "body", widget: "markdown", required: true }
+
+  # Experience Collection
+  - name: "experience"
+    label: "Experience"
+    folder: "experience"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Position", name: "position", widget: "string", required: true }
+      - { label: "Company", name: "company", widget: "string", required: true }
+      - { label: "Start Date", name: "start_date", widget: "datetime", required: true }
+      - { label: "End Date", name: "end_date", widget: "datetime", required: false, hint: "Leave empty for current position" }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: true }
+      - { label: "Skills", name: "skills", widget: "list", allow_add: true, required: false }
+      - { label: "Order", name: "order", widget: "number", default: 0, hint: "Display order (lower numbers first)" }
+
+  # Skills Collection
+  - name: "skills"
+    label: "Skills"
+    folder: "skills"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Category", name: "category", widget: "select", options: ["Programming Languages", "Tools & Technologies", "Cybersecurity", "Data Analytics", "Frameworks"], required: true }
+      - { label: "Icon", name: "icon", widget: "string", required: true, hint: "Font Awesome icon class (e.g., fab fa-python)" }
+      - { label: "Proficiency", name: "proficiency", widget: "select", options: ["Beginner", "Intermediate", "Advanced", "Expert"], required: true }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  # Site Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "settings/general.yml"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", default: "Bhavesh Chaudhary - Cybersecurity Specialist & Data Analyst" }
+          - { label: "Site Description", name: "site_description", widget: "text" }
+          - { label: "Author Name", name: "author_name", widget: "string", default: "Bhavesh Chaudhary" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
+          - { label: "GitHub URL", name: "github_url", widget: "string" }
+          - { label: "Resume URL", name: "resume_url", widget: "string" }
+      
+      - label: "Hero Section"
+        name: "hero"
+        file: "settings/hero.yml"
+        fields:
+          - { label: "Greeting", name: "greeting", widget: "string", default: "Hello, I'm" }
+          - { label: "Name", name: "name", widget: "string", default: "Bhavesh Chaudhary" }
+          - { label: "Typing Texts", name: "typing_texts", widget: "list", allow_add: true }
+          - { label: "Description", name: "description", widget: "markdown" }
+          - { label: "Profile Image", name: "profile_image", widget: "image" }
+          - { label: "Years Experience", name: "years_experience", widget: "number", default: 2 }
+          - { label: "Projects Completed", name: "projects_completed", widget: "number", default: 5 }
+          - { label: "Technologies", name: "technologies_count", widget: "number", default: 10 }

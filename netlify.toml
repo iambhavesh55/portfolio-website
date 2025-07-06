@@ -10,6 +10,12 @@
   to = "/index.html"
   status = 200
 
+# Admin redirect
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
 [[headers]]
   for = "/*.js"
   [headers.values]

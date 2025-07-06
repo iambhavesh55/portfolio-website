@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager - Bhavesh Chaudhary Portfolio</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0a0a0f;
+        color: #ffffff;
+      }
+      
+      /* Custom styling for the CMS */
+      .nc-app-container {
+        background: #0a0a0f !important;
+      }
+      
+      .nc-app-header {
+        background: #111118 !important;
+        border-bottom: 1px solid #2a2a3a !important;
+      }
+      
+      .nc-app-sidebar {
+        background: #1a1a24 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

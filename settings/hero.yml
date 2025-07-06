@@ -1,0 +1,15 @@
+greeting: "Hello, I'm"
+name: "Bhavesh Chaudhary"
+typing_texts:
+  - "Cybersecurity Specialist"
+  - "Data Analyst"
+  - "Ethical Hacker"
+  - "Problem Solver"
+description: |
+  Passionate about ethical hacking, data analytics, and cybersecurity. 
+  Business Information Systems graduate with hands-on experience in 
+  data analysis and machine learning.
+profile_image: "/public/WhatsApp Image 2025-07-01 at 10.39.10_a93cf03e.jpg"
+years_experience: 2
+projects_completed: 5
+technologies_count: 10
