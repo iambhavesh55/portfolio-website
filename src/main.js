@@ -390,6 +390,14 @@ function initializeAnimations() {
         if (skillsContainer) {
             observer.observe(skillsContainer);
         }
+        
+        // Initialize skill items with staggered animation
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px) scale(0.9)';
+        });
+        
     } catch (error) {
         console.error('Error initializing animations:', error);
     }
