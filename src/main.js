@@ -362,6 +362,11 @@ function initializeAnimations() {
                         if (entry.target.classList.contains('hero-stats')) {
                             animateCounters();
                         }
+                        
+                        // Trigger skills animations
+                        if (entry.target.classList.contains('skills-container')) {
+                            animateSkillsSection();
+                        }
                     }, delay);
                 }
             });
@@ -379,8 +384,101 @@ function initializeAnimations() {
         if (statsSection) {
             observer.observe(statsSection);
         }
+        
+        // Add skills section to observer
+        const skillsContainer = document.querySelector('.skills-container');
+        if (skillsContainer) {
+            observer.observe(skillsContainer);
+        }
     } catch (error) {
         console.error('Error initializing animations:', error);
+    }
+}
+
+// Enhanced Skills Section Animations
+function animateSkillsSection() {
+    try {
+        // Animate progress bars
+        const progressBars = document.querySelectorAll('.skill-progress-bar');
+        progressBars.forEach((bar, index) => {
+            const progress = bar.getAttribute('data-progress');
+            setTimeout(() => {
+                bar.style.width = progress + '%';
+            }, index * 100);
+        });
+        
+        // Create floating particles
+        createSkillsParticles();
+        
+        // Add staggered animation to skill items
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0) scale(1)';
+            }, index * 50);
+        });
+        
+    } catch (error) {
+        console.error('Error animating skills section:', error);
+    }
+}
+
+function createSkillsParticles() {
+    try {
+        const particleContainer = document.querySelector('.skills-particles');
+        if (!particleContainer) return;
+        
+        // Clear existing particles
+        particleContainer.innerHTML = '';
+        
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'skills-particle';
+            particle.style.cssText = `
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation-delay: ${Math.random() * 6}s;
+                animation-duration: ${6 + Math.random() * 4}s;
+            `;
+            particleContainer.appendChild(particle);
+        }
+    } catch (error) {
+        console.error('Error creating skills particles:', error);
+    }
+}
+
+// Enhanced 3D Tilt Effect for Skill Cards
+function initializeSkillCardTilt() {
+    try {
+        const skillCards = document.querySelectorAll('.skills-category');
+        
+        skillCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `
+                    translateY(-15px) 
+                    rotateX(${rotateX}deg) 
+                    rotateY(${rotateY}deg) 
+                    scale(1.02)
+                `;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    } catch (error) {
+        console.error('Error initializing skill card tilt:', error);
     }
 }
 
@@ -405,6 +503,9 @@ function startAnimations() {
                 profileFrame.style.opacity = '1';
             }
         }, 800);
+        
+        // Initialize skill card tilt effects
+        initializeSkillCardTilt();
         
     } catch (error) {
         console.error('Error starting animations:', error);
