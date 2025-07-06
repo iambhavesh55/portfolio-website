@@ -1419,8 +1419,10 @@ section {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
@@ -1430,7 +1432,7 @@ section {
     backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
-    padding: var(--space-xl);
+    padding: var(--space-lg);
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
@@ -1460,9 +1462,9 @@ section {
 }
 
 .skills-category h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-md);
     text-align: center;
     position: relative;
     z-index: 2;
@@ -1475,19 +1477,19 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-sm);
 }
 
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-lg);
+    gap: var(--space-xs);
+    padding: var(--space-sm);
     background: var(--bg-tertiary);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     transition: all var(--transition-base);
     cursor: pointer;
     min-height: 100px;
@@ -1506,8 +1508,8 @@ section {
     margin-bottom: var(--space-sm);
 
 .skill-item img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
     filter: brightness(0.8);
     transition: all var(--transition-base);
@@ -1520,10 +1522,11 @@ section {
 }
 
 .skill-item span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     text-align: center;
     color: var(--text-primary);
+    line-height: 1.2;
 }
 
 /* Remove any progress bar styles */
@@ -1644,8 +1647,10 @@ section {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
@@ -1657,7 +1662,7 @@ section {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 245, 255, 0.2);
     border-radius: var(--radius-xl);
-    padding: var(--space-xl);
+    padding: var(--space-lg);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -1723,9 +1728,9 @@ section {
 
 /* Enhanced Category Headers */
 .skills-category h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     text-align: center;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -1752,8 +1757,8 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-sm);
 }
 
 /* Enhanced Skill Items with Micro-Interactions */
@@ -1762,12 +1767,12 @@ section {
     flex-direction: column;
     align-items: center;
     gap: var(--space-xs);
-    padding: var(--space-md);
+    padding: var(--space-sm);
     background: rgba(26, 26, 36, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 245, 255, 0.1);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1869,12 +1874,13 @@ section {
 }
 
 .skill-item span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     text-align: center;
     margin-top: var(--space-xs);
     position: relative;
     z-index: 2;
+    line-height: 1.2;
 }
 
 /* Skills Particles Background */
