@@ -47,37 +47,17 @@ function initializeTheme() {
     currentTheme = savedTheme;
     document.documentElement.setAttribute('data-theme', currentTheme);
     
-    // Initialize theme selector
-    const themeSelector = document.getElementById('themeSelector');
-    if (themeSelector) {
-        const themeButtons = themeSelector.querySelectorAll('.theme-btn');
-        themeButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const theme = btn.getAttribute('data-theme');
-                setTheme(theme);
-            });
-            
-            if (btn.getAttribute('data-theme') === currentTheme) {
-                btn.classList.add('active');
-            }
-        });
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
     }
 }
 
-// Set theme
-function setTheme(theme) {
-    currentTheme = theme;
+// Toggle theme
+function toggleTheme() {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
     localStorage.setItem('portfolio-theme', currentTheme);
-    
-    // Update active button
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    themeButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-theme') === currentTheme) {
-            btn.classList.add('active');
-        }
-    });
     
     // Add transition effect
     document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
@@ -99,9 +79,8 @@ function startPortfolio() {
         initializeParticles();
         initializeProjectFilters();
         initializeTooltips();
-        initializeSkillBars();
         startAnimations();
-        initializeAOS();
+        startTypingAnimation();
         console.log('Enhanced portfolio initialization complete!');
     } catch (error) {
         console.error('Error starting portfolio:', error);
@@ -112,24 +91,9 @@ function startPortfolio() {
     }
 }
 
-// Initialize AOS (Animate On Scroll)
-function initializeAOS() {
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 100,
-            delay: 0
-        });
-        console.log('AOS initialized successfully');
-    } else {
-        console.warn('AOS library not loaded');
-    }
-}
-
+// Typing animation
 function startTypingAnimation() {
-    const typingElement = document.getElementById('typedText');
+    const typingElement = document.getElementById('typingText');
     if (!typingElement) return;
 
     function type() {
@@ -146,12 +110,12 @@ function startTypingAnimation() {
         let typeSpeed = isDeleting ? 50 : 100;
 
         if (!isDeleting && currentCharIndex === currentText.length) {
-            typeSpeed = 2000;
+            typeSpeed = 2000; // Pause at end
             isDeleting = true;
         } else if (isDeleting && currentCharIndex === 0) {
             isDeleting = false;
             currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
-            typeSpeed = 500;
+            typeSpeed = 500; // Pause before next word
         }
 
         setTimeout(type, typeSpeed);
@@ -192,30 +156,6 @@ function initializeProjectFilters() {
                 }
             });
         });
-    });
-}
-
-// Initialize skill progress bars
-function initializeSkillBars() {
-    const skillCategories = document.querySelectorAll('.skills-category');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-bar');
-                skillBars.forEach((bar, index) => {
-                    setTimeout(() => {
-                        const width = bar.getAttribute('data-width');
-                        bar.style.width = width + '%';
-                        bar.parentElement.parentElement.classList.add('animate');
-                    }, index * 200);
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    skillCategories.forEach(category => {
-        observer.observe(category);
     });
 }
 
