@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager - Bhavesh Chaudhary Portfolio</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
         background: #0a0a0f;
         color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+      }
+      
+      .loading-content {
+        text-align: center;
+        color: #00f5ff;
+      }
+      
+      .loading-logo {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
       }
       
       /* Custom styling for the CMS */
@@ -26,18 +57,66 @@
       .nc-app-sidebar {
         background: #1a1a24 !important;
       }
+      
+      .nc-sidebar-nav-item {
+        color: #ffffff !important;
+      }
+      
+      .nc-sidebar-nav-item:hover {
+        background: #2a2a3a !important;
+      }
     </style>
   </head>
   <body>
+    <div id="loading" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">BC</div>
+        <div>Loading Admin Panel...</div>
+      </div>
+    </div>
+    
     <script>
+      // Initialize Netlify Identity
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
+            // User not logged in, show login
+            window.netlifyIdentity.open();
+          } else {
+            // User is logged in, hide loading and show CMS
+            document.getElementById('loading').style.display = 'none';
+            // Initialize CMS
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/decap-cms@latest/dist/decap-cms.js';
+            script.onload = function() {
+              console.log('CMS loaded successfully');
+            };
+            document.head.appendChild(script);
           }
         });
+        
+        window.netlifyIdentity.on("login", () => {
+          // User logged in, reload to show CMS
+          document.location.reload();
+        });
+        
+        window.netlifyIdentity.on("logout", () => {
+          // User logged out, redirect to home
+          document.location.href = "/";
+        });
+      } else {
+        // Fallback if Netlify Identity doesn't load
+        setTimeout(() => {
+          document.getElementById('loading').innerHTML = `
+            <div class="loading-content">
+              <div class="loading-logo">⚠️</div>
+              <div>Admin panel setup in progress...</div>
+              <div style="margin-top: 20px; font-size: 14px;">
+                <a href="/" style="color: #00f5ff;">← Back to Portfolio</a>
+              </div>
+            </div>
+          `;
+        }, 3000);
       }
     </script>
   </body>
