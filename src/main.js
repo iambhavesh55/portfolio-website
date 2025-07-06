@@ -5,8 +5,6 @@ let isLoading = true;
 let scrollProgress = 0;
 let currentSection = 'hero';
 let currentTheme = 'dark';
-let soundEnabled = true;
-let terminalActive = false;
 
 // Typing animation texts
 const typingTexts = [
@@ -19,32 +17,12 @@ let currentTextIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
 
-// Sound effects
-let hoverSound, clickSound;
-
-// Terminal commands
-const terminalCommands = {
-    'help': 'Available commands: about, skills, projects, contact, clear, exit, whoami, date, ls',
-    'about': 'Cybersecurity Specialist & Data Analyst passionate about ethical hacking and data science.',
-    'skills': 'Python, Java, SQL, Cybersecurity, Data Analysis, Machine Learning, Ethical Hacking',
-    'projects': 'Customer Churn Prediction, Buy & Sell System, Personal Finance Dashboard, Network Security Analysis',
-    'contact': 'Email: iambhavesh55@gmail.com | Phone: +61 468 538 615 | LinkedIn: bhavesh-chaudhary',
-    'whoami': 'bhavesh_chaudhary',
-    'date': () => new Date().toString(),
-    'ls': 'portfolio.html  resume.pdf  projects/  skills/  contact.txt',
-    'clear': 'CLEAR_TERMINAL',
-    'exit': 'EXIT_TERMINAL'
-};
-
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing enhanced portfolio...');
     
     // Initialize theme
     initializeTheme();
-    
-    // Initialize sound
-    initializeSound();
     
     // Force remove loading screen with multiple fallbacks
     const loadingScreen = document.getElementById('loadingScreen');
@@ -66,9 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Initialize theme system
 function initializeTheme() {
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-    const savedSound = localStorage.getItem('portfolio-sound') !== 'false';
     currentTheme = savedTheme;
-    soundEnabled = savedSound;
     document.documentElement.setAttribute('data-theme', currentTheme);
     
     // Initialize theme selector
@@ -79,20 +55,12 @@ function initializeTheme() {
             btn.addEventListener('click', () => {
                 const theme = btn.getAttribute('data-theme');
                 setTheme(theme);
-                playSound('click');
             });
             
             if (btn.getAttribute('data-theme') === currentTheme) {
                 btn.classList.add('active');
             }
         });
-    }
-    
-    // Initialize sound toggle
-    const soundToggle = document.getElementById('soundToggle');
-    if (soundToggle) {
-        soundToggle.addEventListener('click', toggleSound);
-        updateSoundIcon();
     }
 }
 
@@ -118,59 +86,6 @@ function setTheme(theme) {
     }, 300);
 }
 
-// Toggle sound
-function toggleSound() {
-    soundEnabled = !soundEnabled;
-    localStorage.setItem('portfolio-sound', soundEnabled);
-    updateSoundIcon();
-    
-    if (soundEnabled) {
-        playSound('click');
-    }
-}
-
-// Update sound icon
-function updateSoundIcon() {
-    const soundToggle = document.getElementById('soundToggle');
-    if (soundToggle) {
-        const icon = soundToggle.querySelector('i');
-        if (soundEnabled) {
-            icon.className = 'fas fa-volume-up';
-            soundToggle.classList.remove('muted');
-        } else {
-            icon.className = 'fas fa-volume-mute';
-            soundToggle.classList.add('muted');
-        }
-    }
-}
-
-// Initialize sound effects
-function initializeSound() {
-    hoverSound = document.getElementById('hoverSound');
-    clickSound = document.getElementById('clickSound');
-}
-
-// Play sound effect
-function playSound(type) {
-    if (!soundEnabled) return;
-    
-    try {
-        let audio;
-        if (type === 'hover' && hoverSound) {
-            audio = hoverSound.cloneNode();
-        } else if (type === 'click' && clickSound) {
-            audio = clickSound.cloneNode();
-        }
-        
-        if (audio) {
-            audio.volume = 0.1; // Very subtle
-            audio.play().catch(() => {}); // Ignore errors
-        }
-    } catch (error) {
-        // Silently ignore sound errors
-    }
-}
-
 // Start the main portfolio functionality
 function startPortfolio() {
     console.log('Starting enhanced portfolio functionality...');
@@ -185,10 +100,7 @@ function startPortfolio() {
         initializeProjectFilters();
         initializeTooltips();
         initializeSkillBars();
-        initializeTerminal();
-        initializeEnhancedEffects();
         startAnimations();
-        initializeTypedJS();
         initializeAOS();
         console.log('Enhanced portfolio initialization complete!');
     } catch (error) {
@@ -216,30 +128,6 @@ function initializeAOS() {
     }
 }
 
-// Initialize Typed.js for typing effect
-function initializeTypedJS() {
-    const typedElement = document.getElementById('typedText');
-    if (typedElement && typeof Typed !== 'undefined') {
-        new Typed('#typedText', {
-            strings: typingTexts,
-            typeSpeed: 80,
-            backSpeed: 50,
-            backDelay: 2000,
-            startDelay: 500,
-            loop: true,
-            showCursor: true,
-            cursorChar: '_',
-            autoInsertCss: true
-        });
-        console.log('Typed.js initialized successfully');
-    } else {
-        console.warn('Typed.js library not loaded or element not found');
-        // Fallback to original typing animation
-        startTypingAnimation();
-    }
-}
-
-// Fallback typing animation
 function startTypingAnimation() {
     const typingElement = document.getElementById('typedText');
     if (!typingElement) return;
@@ -285,8 +173,6 @@ function initializeProjectFilters() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             
-            playSound('click');
-            
             // Filter projects with animation
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
@@ -322,11 +208,6 @@ function initializeSkillBars() {
                         const width = bar.getAttribute('data-width');
                         bar.style.width = width + '%';
                         bar.parentElement.parentElement.classList.add('animate');
-                        
-                        // Play sound for each skill bar
-                        setTimeout(() => {
-                            playSound('hover');
-                        }, 1500);
                     }, index * 200);
                 });
             }
@@ -335,162 +216,6 @@ function initializeSkillBars() {
     
     skillCategories.forEach(category => {
         observer.observe(category);
-    });
-}
-
-// Initialize terminal easter egg
-function initializeTerminal() {
-    const terminalOverlay = document.getElementById('terminalOverlay');
-    const terminalClose = document.getElementById('terminalClose');
-    const terminalBody = document.getElementById('terminalBody');
-    
-    // Key combination to open terminal (Ctrl + `)
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && e.key === '`') {
-            e.preventDefault();
-            openTerminal();
-        }
-        
-        // Escape to close terminal
-        if (e.key === 'Escape' && terminalActive) {
-            closeTerminal();
-        }
-    });
-    
-    // Close button
-    if (terminalClose) {
-        terminalClose.addEventListener('click', closeTerminal);
-    }
-    
-    // Click outside to close
-    if (terminalOverlay) {
-        terminalOverlay.addEventListener('click', (e) => {
-            if (e.target === terminalOverlay) {
-                closeTerminal();
-            }
-        });
-    }
-    
-    function openTerminal() {
-        if (terminalOverlay) {
-            terminalActive = true;
-            terminalOverlay.classList.add('active');
-            playSound('click');
-            
-            // Add welcome message
-            addTerminalLine('Welcome to Bhavesh\'s Portfolio Terminal!');
-            addTerminalLine('Type "help" for available commands.');
-            addTerminalLine('');
-        }
-    }
-    
-    function closeTerminal() {
-        if (terminalOverlay) {
-            terminalActive = false;
-            terminalOverlay.classList.remove('active');
-            
-            // Clear terminal content
-            setTimeout(() => {
-                if (terminalBody) {
-                    terminalBody.innerHTML = `
-                        <div class="terminal-line">
-                            <span class="terminal-prompt">bhavesh@portfolio:~$</span>
-                            <span class="terminal-cursor">_</span>
-                        </div>
-                    `;
-                }
-            }, 300);
-        }
-    }
-    
-    function addTerminalLine(text, type = 'output') {
-        if (!terminalBody) return;
-        
-        const line = document.createElement('div');
-        line.className = `terminal-line terminal-${type}`;
-        line.textContent = text;
-        
-        // Insert before the cursor line
-        const cursorLine = terminalBody.querySelector('.terminal-line:last-child');
-        terminalBody.insertBefore(line, cursorLine);
-        
-        // Scroll to bottom
-        terminalBody.scrollTop = terminalBody.scrollHeight;
-    }
-    
-    // Simulate terminal input (for demo purposes)
-    let commandIndex = 0;
-    const demoCommands = ['help', 'whoami', 'skills', 'projects'];
-    
-    function simulateCommand() {
-        if (!terminalActive || commandIndex >= demoCommands.length) return;
-        
-        const command = demoCommands[commandIndex];
-        addTerminalLine(`bhavesh@portfolio:~$ ${command}`, 'input');
-        
-        setTimeout(() => {
-            const response = terminalCommands[command];
-            if (typeof response === 'function') {
-                addTerminalLine(response());
-            } else {
-                addTerminalLine(response);
-            }
-            addTerminalLine('');
-            commandIndex++;
-            
-            if (commandIndex < demoCommands.length) {
-                setTimeout(simulateCommand, 2000);
-            }
-        }, 1000);
-    }
-    
-    // Start demo after terminal opens
-    setTimeout(() => {
-        if (terminalActive) {
-            simulateCommand();
-        }
-    }, 1000);
-}
-
-// Initialize enhanced effects
-function initializeEnhancedEffects() {
-    // Add hover sound effects to interactive elements
-    const interactiveElements = document.querySelectorAll(
-        '.btn, .nav-link, .skill-item, .project-card, .about-card, .contact-item, .filter-btn, .theme-btn'
-    );
-    
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            playSound('hover');
-        });
-        
-        element.addEventListener('click', () => {
-            playSound('click');
-        });
-    });
-    
-    // Enhanced scroll effects
-    let ticking = false;
-    
-    function updateScrollEffects() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        // Parallax background elements
-        const bgElements = document.querySelectorAll('.bg-effects > *');
-        bgElements.forEach((element, index) => {
-            const speed = 0.5 + (index * 0.1);
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-        });
-        
-        ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(updateScrollEffects);
-            ticking = true;
-        }
     });
 }
 
@@ -552,7 +277,6 @@ function initializeNavigation() {
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                playSound('click');
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
                 
@@ -811,7 +535,6 @@ function initializeContactForm() {
         // Form submission with enhanced validation
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            playSound('click');
             handleFormSubmission(this);
         });
         
@@ -819,7 +542,6 @@ function initializeContactForm() {
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(input => {
             input.addEventListener('focus', function() {
-                playSound('hover');
                 this.parentElement.classList.add('focused');
                 this.style.transform = 'scale(1.02)';
             });
@@ -1023,7 +745,6 @@ function initializeBackToTop() {
         }, 100));
 
         backToTop.addEventListener('click', () => {
-            playSound('click');
             smoothScrollTo(0, 1000);
             
             // Add click animation
